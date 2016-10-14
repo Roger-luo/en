@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Half Integer"/>
+        <meta property="og:title" content="one-way模型"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Algorithms - Half Integer</title>
+    <title>one-way模型 - Half Integer</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -159,48 +159,125 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="post-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Algorithms</h1>
+                <div class="post-heading">
+                    <h1>one-way模型</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-01-08
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+<a href="/categories/量子计算-quantum-computation/">量子计算/quantum computation</a>
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/cn/2016/04/04/2016-05-01-quantum-deep-learning/">
-        <h1 class="post-title archive">
-            量子深度学习笔记/Notes on quantum deep learning
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-04-04
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1>One-way 模型</h1>
+<h2>图态</h2>
+<p>对于给定的图有两种定义图态的方式</p>
+<ul>
+<li>用操作定义(适用于制备图态)
+<ul>
+<li>将所有qubit制备成$|+\rangle$</li>
+<li>对有边的qubit进行CZ操作</li>
 </ul>
+</li>
+</ul>
+<p>$$
+CZ =
+\begin{pmatrix}
+1 &amp;\<br>
+&amp; 1\<br>
+&amp;    &amp; 1\<br>
+&amp;    &amp;   &amp; -1\<br>
+\end{pmatrix}
+$$</p>
+<p>因为CZ门对称所以可以看作是有向图的边</p>
+<p>也就是
+$$
+|G\rangle = \prod_{(a,b)\in E} U<sup>{(a,b)}|+\rangle</sup>{\otimes V}
+$$</p>
+<p>其中$U^{(a,b)}$是a,b之间的CZ门</p>
+<ul>
+<li>用stabilizer定义，对于一个顶点a，定义stabilizer为
+$$
+K_a = \sigma_a^x \prod_{b\in N_a} \sigma_b^z
+$$</li>
+</ul>
+<p>$N_a$是a的临接点集合，所有的stabilizer都是对易的(这是指什么？)，所有的stabilizer在图态中等于1？</p>
+<p>定义Hamiltonian
+$$
+H = -\sum_a K_a
+$$
+那么$H$的基态就是图态$|G\rangle$</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-2015-12-25-one-way" data-title="one-way模型" data-url="http://Roger-luo.github.com/cn/2016/01/08/2015-12-25-one-way/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'rogerluo'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+            </script>
+        <!-- 多说公共JS代码 end -->
+    </section>
+
+                </div>
+            
         </div>
     </div>
-</div>
+</article>
 
 
     <!-- Footer -->
@@ -270,7 +347,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>

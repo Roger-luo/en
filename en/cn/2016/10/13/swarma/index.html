@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Half Integer"/>
+        <meta property="og:title" content="记集智-凯风研读营"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Algorithms - Half Integer</title>
+    <title>记集智-凯风研读营 - Half Integer</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -159,48 +159,98 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="post-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Algorithms</h1>
+                <div class="post-heading">
+                    <h1>记集智-凯风研读营</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-10-13
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Activities/">#Activities</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/cn/2016/04/04/2016-05-01-quantum-deep-learning/">
-        <h1 class="post-title archive">
-            量子深度学习笔记/Notes on quantum deep learning
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-04-04
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1>写在前面</h1>
+<p>参加集智研读营起初是因为看到了朋友圈里有人转发傅渥成在知乎里的<strong>广告</strong>。。。发现主题和我想要做的方向（量子信息&amp;人工智能，具体一点可能是张量网络，量子计算和人工智能）很相关，看到我们学校也有同学（章彦博）去，抱着试试的想法，发了一封邮件，然后。。。我就来了。。。一开始以为会在北京的某个咖啡厅或者学校，后来才发现是在古北水镇，一个很漂亮的小镇，会贴一些照片，然后感觉这个基金会好土豪。。。在这个研读营里恰好拉到了一些傅渥成和symcheng这样的<strong>大V</strong>想一起维护一个blog，主题大约会围绕在我们几个的专业领域里（我估计主要会是凝聚态，量子信息，面向数值计算的编程这样三个领域）。我们初步的打算是用github pages，会建一个org，所以这篇post应该是我这个短命的blog的最后一篇，以后就主要当homepage用了（当然也许以后会从新的blog里转文章来）。</p>
+<h1>讲了啥</h1>
+<p>个人感觉研读营的讨论主要围绕着<a href="">复杂网络</a>，<a href="">双曲几何</a>，<a href="">量子物理</a>，<a href="">统计物理</a>和<a href="">机器学习算法</a>展开。我在来之前的个人知识背景是比较浅的，虽然机器学习和量子物理都有涉猎，不过都只会一些基本的，然后张量网络在来之前几周开始看的。（然后感觉这次最大的收获是我问着程嵩和尤亦庄把一些基本张量网络的内容给过了，手动笑哭）。说几个这次听到的几个个人比较感兴趣的问题，一个很有意思的是尤亦庄学长讲的从随机张量网络里找几何机构的问题，然后很自然的出现了一个玻尔兹曼机，于是我们就可以用机器学习的方法获得这个几何结构（tensor之间的连接）。这就可以看做是一种时空结构的解释：空间的结构是通过一个玻尔兹曼机来学习宇宙中大量的量子态训练出来的。然而，当然，这样一个隐藏层全连接的玻尔兹曼机是很难训练的。于是就想到了年初的那篇量子玻尔兹曼机的文章，之前我以为研究量子玻尔兹曼机的出发点是因为这个很难算，所以我们希望能用量子计算机来解决这个问题，现在的感觉是量子计算也可以是一种理解物理世界的方法。然后就是GAN模型和做统计物理的人做的玻尔兹曼机感觉很有意思，然而几天时间感觉还不够我完全弄懂，要了一些入门的材料回来学习。其它主题我觉得就主要是几何和网络的问题，开了一些把网络问题在量子物理下求解的脑洞，不过这些想法也还很不成熟，或者其实是有问题的，如果啥时候试出来靠谱的了再说吧。最后是吴令飞介绍的ISOMAP，流形学习的算法。流形学习之前有听说过但是一直没有去看，感觉有人讲以后容易理解很多。总而言之，我觉得主要的收货是了解了一些相关领域的前沿工作，具体的理论并没有学会（可能还是我太渣OTZ），然后准备1月份申请的事情基本结束自己好好把这次的相关文献消化一下。</p>
+<h1>照片们</h1>
+<p>然后虽然报告和讨论是几乎没有休息地从早上8:30到晚上5:30，然后到了晚上还有讨论，不过我们也还是在这边的景区里转了转的，最后一天下午还爬了一下司马台长城。所以还是拍了不少照片。在这种风景很棒的地方讨论问题的感觉很棒，以至于我和程嵩基本上是在这个镇子里随机游走...</p>
+<p>由于程嵩是专业的摄影爱好者，于是我们拍了很多照片，然后还有一些是更专业的摄影师朵朵的拍的照片。</p>
+<h1>最后</h1>
+<p>干货什么的只能等好好读完文献再写了，所以依然要拖到1月份了。然后欢迎关注我们的新blog。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-swarma" data-title="记集智-凯风研读营" data-url="http://Roger-luo.github.com/cn/2016/10/13/swarma/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'rogerluo'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+            </script>
+        <!-- 多说公共JS代码 end -->
+    </section>
+
+                </div>
+            
         </div>
     </div>
-</div>
+</article>
 
 
     <!-- Footer -->
@@ -270,7 +320,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>

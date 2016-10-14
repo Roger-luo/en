@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Half Integer"/>
+        <meta property="og:title" content="complexity"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Algorithms - Half Integer</title>
+    <title>complexity - Half Integer</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -159,48 +159,107 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="post-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Algorithms</h1>
+                <div class="post-heading">
+                    <h1>complexity</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-01-08
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+<a href="/categories/量子计算-quantum-computation/">量子计算/quantum computation</a>
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/cn/2016/04/04/2016-05-01-quantum-deep-learning/">
-        <h1 class="post-title archive">
-            量子深度学习笔记/Notes on quantum deep learning
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-04-04
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1>Computation complexity</h1>
+<ul>
+<li>P problem: 由确定图灵机在多项式时间内解决的问题</li>
+<li>NP problem(non-deterministic) 能够在多项式时间内检验一个解是否正确
+<ul>
+<li>旅行商问题：给定n个城市的两两距离，求找到一个行走方案，使得到达每个城市一次的总路程最短。可以猜测它的解：求一个总路程不超过100的方案，然后猜50...类似二分查找最后运气好也许就猜到这个问题的解了。</li>
 </ul>
+</li>
+<li>NP complete：一个决定性问题(decision problem) 是NP完全的，如果
+<ul>
+<li>它是一个NP问题</li>
+<li>所有的NP问题都可以在多项式时间内归约到这个问题</li>
+<li>SAT：一个命题$\gamma$称为可满足式，如果$\gamma$对于其中出现的命题变元的某个指派为成真指派</li>
+<li>例子：3-SAT问题(可满足性问题)：如果一个合取式(合取范式)最多是3个因子的析取式，判断此表达式是否是可满足的，称为3-SAT问题(也就是是否存在使得所有子句为真的指派)，图的染色问题</li>
+<li><a href="http://ccckmit.github.io/ct/htm/NP-Complete.html" target="_blank" rel="external">复杂性问题的一个blog</a></li>
+</ul>
+</li>
+<li>BQP :能够被量子计算机在多项式时间内解决的问题</li>
+<li>归约：将某个问题转化为另外一个问题的过程</li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-2015-12-25-量子计算笔记" data-title="complexity" data-url="http://Roger-luo.github.com/cn/2016/01/08/2015-12-25-量子计算笔记/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'rogerluo'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+            </script>
+        <!-- 多说公共JS代码 end -->
+    </section>
+
+                </div>
+            
         </div>
     </div>
-</div>
+</article>
 
 
     <!-- Footer -->
@@ -270,7 +329,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
