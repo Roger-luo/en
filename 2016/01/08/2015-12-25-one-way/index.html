@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="CV"/>
+        <meta property="og:title" content="one-way模型"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>CV - Half Integer</title>
+    <title>one-way模型 - Half Integer</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -167,12 +167,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>CV</h1>
+                    <h1>one-way模型</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
-                        2014-01-08
+                        2016-01-08
                     </span>
                 </div>
             </div>
@@ -187,55 +187,62 @@
 
             <!-- Tags and categories -->
            
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+<a href="/categories/量子计算-quantum-computation/">量子计算/quantum computation</a>
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1>Roger(Xiuzhe) Luo</h1>
-<p>University of Science and Technology of China,
-Room 518 at Key laboratory of quantum information, CAS</p>
-<p>No.96, Jinzhai Road, Baohe District, Hefei, Anhui Province, 230000, P.R.China</p>
-<p><a href="/cv/cv.pdf"><strong>Detailed CV</strong></a></p>
-<hr>
-<h2>Education</h2>
-<h3><a href="http://en.ustc.edu.cn/" target="_blank" rel="external">University of Science and Technology of China</a></h3>
-<p><strong>September 2013 - Present</strong></p>
+                <h1>One-way 模型</h1>
+<h2>图态</h2>
+<p>对于给定的图有两种定义图态的方式</p>
 <ul>
-<li>Bachelor in Physics/Computer Science (double degree)</li>
-<li>Anticipated Graduation : June 2017</li>
+<li>用操作定义(适用于制备图态)
+<ul>
+<li>将所有qubit制备成$|+\rangle$</li>
+<li>对有边的qubit进行CZ操作</li>
 </ul>
-<hr>
-<h2>Interests</h2>
-<ul>
-<li>Quantum Computing's application:</li>
-<li>Quantum-inspired machine learning and quantum machine learning</li>
-<li>Quantum Information Theory</li>
-<li>Machine Learning in Quantum Physics</li>
-</ul>
-<hr>
-<h2>Research Experience</h2>
-<ul>
-<li>
-<p>Professor <a href="http://www.princeton.edu/plasma/faculty/hqin/" target="_blank" rel="external">Hong Qin</a> (Jan, 2014 - June, 2015)</p>
-</li>
-<li>
-<p>Professor <a href="https://www.researchgate.net/profile/Chuan-Feng_Li" target="_blank" rel="external">Chuanfeng Li</a> and Professor <a href="https://www.researchgate.net/profile/Yongjian_Han" target="_blank" rel="external">Yongjian Han</a> (June, 2015 - present)</p>
 </li>
 </ul>
-<hr>
-<h2>Activities</h2>
-<h3>Club activities</h3>
+<p>$$
+CZ =
+\begin{pmatrix}
+1 &amp;\<br>
+&amp; 1\<br>
+&amp;    &amp; 1\<br>
+&amp;    &amp;   &amp; -1\<br>
+\end{pmatrix}
+$$</p>
+<p>因为CZ门对称所以可以看作是有向图的边</p>
+<p>也就是
+$$
+|G\rangle = \prod_{(a,b)\in E} U<sup>{(a,b)}|+\rangle</sup>{\otimes V}
+$$</p>
+<p>其中$U^{(a,b)}$是a,b之间的CZ门</p>
 <ul>
-<li>USTC UAV club (sponsored by <a href="http://www.dji.com" target="_blank" rel="external">Dji</a>):</li>
-<li>USTC Linux User Group</li>
+<li>用stabilizer定义，对于一个顶点a，定义stabilizer为
+$$
+K_a = \sigma_a^x \prod_{b\in N_a} \sigma_b^z
+$$</li>
 </ul>
-<h3>Open-source activities</h3>
-<ul>
-<li>Chinese Julia language community (2015 - present)</li>
-<li>JuliaQuantum</li>
-</ul>
+<p>$N_a$是a的临接点集合，所有的stabilizer都是对易的(这是指什么？)，所有的stabilizer在图态中等于1？</p>
+<p>定义Hamiltonian
+$$
+H = -\sum_a K_a
+$$
+那么$H$的基态就是图态$|G\rangle$</p>
 
 
                 
@@ -249,7 +256,7 @@ Room 518 at Key laboratory of quantum information, CAS</p>
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-undefined" data-title="CV" data-url="http://Roger-luo.github.com/cv/index.html"></div>
+    <div class="ds-thread" data-thread-key="post-2015-12-25-one-way" data-title="one-way模型" data-url="http://Roger-luo.github.com/2016/01/08/2015-12-25-one-way/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
