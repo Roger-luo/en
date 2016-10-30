@@ -209,8 +209,10 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p><strong>为什么要造量子计算机？<strong>在现代物理和计算机科学的发展过程中，我们渐渐开始面临更加庞大的数据和更加可怕的计算量，而有些问题我们在做了一些尝试之后发现，如果只有有限的电子计算资源（特指经典的电子计算机）是根本无法完成对它们的求解的。比如，在凝聚态物理中，我们常常需要</strong>求解多体的薛定谔方程</strong>，直接求解薛定谔方程实际上是在对一些很庞大的矩阵进行线性代数的计算，再具体一些，在求解一个n体问题的时候，我们需要数值求解的矩阵大约有这么大。一方面，基于迅速发展的电子工业，我们建造了越来越强大的超级计算机来解决这些问题，比如近期在世界最快的超级计算机上<strong>整机</strong>（800万核）计算了<a href="http:://www.nsccwx.cn/casedetail.php%3Fword%3Dcase%26i%3D58%26id%3D110" target="_blank" rel="external">钛合金微结构演化相场</a>。或者我们尝试去从这么大的矩阵中提取一些重要的部分来计算，比如我们使用重整化的方法来计算一维的Ising模型（<a href="http:://baike.baidu.com/view/4637072.htm" target="_blank" rel="external">DMRG</a>）。但是它们都有很大的局限性，我们在这些路上遇到了越来越多的困难。</p>
 <p>同时在最近，我们迎来了一个大数据，大计算的时代，对计算资源的需求也许有一天会超过经典计算机的能力，或者使得经典计算的成本相对更高。所以我们希望能够有一种计算机，<strong>能耗更低，计算能力更强，占用的空间更小</strong>。对于能耗的问题，从上个世纪开始，就有关于可逆计算的研究了。什么是可逆计算呢？可逆计算就是说这个计算过程所获得的结果可以从这个线路输入回去得到你输入的东西。在物理中表现为没有熵增加，也就是熵保持不变，也就是一个绝热过程，是不耗能的。其中Toffli门就是一种能够实现可逆计算的门。</p>
-<p>一个Toffli门
-<img src="/images/toffli.jpg" alt="toffli gate"></p>
+<ul>
+<li>一个Toffli门</li>
+</ul>
+<p><img src="/images/toffli.jpg" alt="toffli gate"></p>
 <p>而恰好通用量子计算是可逆的，并且量子比特可以在一定程度上压缩信息，表示一个的向量只要个qubit（量子比特）就足够了，简直是处理大数据的利器！</p>
 <p>最近几年，工业界的一些大公司逐渐开始关注量子计算，谷歌公司收购了Dwave（<a href="http://36kr.com/p/172277.html" target="_blank" rel="external">深波</a>），用以开发更强大的量子计算机来提高处理大数据的能力，阿里巴巴和中科院合作成立了<a href="http://scitech.people.com.cn/n/2015/0731/c1057-27388600.html" target="_blank" rel="external">量子计算实验室</a>。当然<a href="http://stationq.com/" target="_blank" rel="external">巨硬</a>的理论研究很早就开始了。</p>
 <p>我们开始进一步探索量子计算在人工智能领域的应用，尽管我们还没有发现特别震撼的算法，但是一些基于<a href="https://arxiv.org/pdf/0811.3171v3.pdf" target="_blank" rel="external">HHL算法</a>（一种求解线性方程组的算法）的工作比如<a href="https://arxiv.org/pdf/1307.0471v2.pdf" target="_blank" rel="external">QSVM</a>（量子支持向量机）已经表现出指数级的加速效果，在最近的量子玻尔兹曼机的工作中我们也获得了相对经典模型更低的KL距离（KL divergence）。</p>
