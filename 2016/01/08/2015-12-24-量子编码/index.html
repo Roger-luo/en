@@ -205,60 +205,60 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="经典编码理论">经典编码理论</h1>
-<p>一个线性编码C是将k比特信息加密到n比特的编码空间，记作<span class="math inline">\(n\times k\)</span>生成元G，叫做[n,k]码，码字由<span class="math inline">\(G\cdot x\)</span>生成</p>
-<p>另外一种定义线性编码的方法是通过奇偶检验矩阵 <span class="math display">\[
+                <h1 id="jing-dian-bian-ma-li-lun"><a href="#jing-dian-bian-ma-li-lun" class="header-anchor">#</a> &#x7ECF;&#x5178;&#x7F16;&#x7801;&#x7406;&#x8BBA;</h1>
+<p>&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x7F16;&#x7801;C&#x662F;&#x5C06;k&#x6BD4;&#x7279;&#x4FE1;&#x606F;&#x52A0;&#x5BC6;&#x5230;n&#x6BD4;&#x7279;&#x7684;&#x7F16;&#x7801;&#x7A7A;&#x95F4;&#xFF0C;&#x8BB0;&#x4F5C;<span class="math inline">\(n\times k\)</span>&#x751F;&#x6210;&#x5143;G&#xFF0C;&#x53EB;&#x505A;[n,k]&#x7801;&#xFF0C;&#x7801;&#x5B57;&#x7531;<span class="math inline">\(G\cdot x\)</span>&#x751F;&#x6210;</p>
+<p>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x5B9A;&#x4E49;&#x7EBF;&#x6027;&#x7F16;&#x7801;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7;&#x5947;&#x5076;&#x68C0;&#x9A8C;&#x77E9;&#x9635; <span class="math display">\[
 Hx = 0
-\]</span> 这里H是一个<span class="math inline">\((n-k)\times n\)</span>的奇偶检验矩阵，x是一个n元的向量，码字就是矩阵H的核</p>
-<h2 id="h和g的关系">H和G的关系</h2>
+\]</span> &#x8FD9;&#x91CC;H&#x662F;&#x4E00;&#x4E2A;<span class="math inline">\((n-k)\times n\)</span>&#x7684;&#x5947;&#x5076;&#x68C0;&#x9A8C;&#x77E9;&#x9635;&#xFF0C;x&#x662F;&#x4E00;&#x4E2A;n&#x5143;&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x7801;&#x5B57;&#x5C31;&#x662F;&#x77E9;&#x9635;H&#x7684;&#x6838;</p>
+<h2 id="h-he-g-de-guan-xi"><a href="#h-he-g-de-guan-xi" class="header-anchor">#</a> H&#x548C;G&#x7684;&#x5173;&#x7CFB;</h2>
 <ul>
-<li><span class="math inline">\(H\rightarrow G\)</span> 选取kernel中k个线性独立向量构成G的列</li>
-<li><span class="math inline">\(G\rightarrow G\)</span> 选取n-k个线性独立的向量<span class="math inline">\(y\_1,y\_2,\dots,y\_{n-k}\)</span>与G的每一列正交，H的行就是<span class="math inline">\(y\_1^T,y\_2^T,\dots,y\_{n-k}^T\)</span></li>
+<li><span class="math inline">\(H\rightarrow G\)</span> &#x9009;&#x53D6;kernel&#x4E2D;k&#x4E2A;&#x7EBF;&#x6027;&#x72EC;&#x7ACB;&#x5411;&#x91CF;&#x6784;&#x6210;G&#x7684;&#x5217;</li>
+<li><span class="math inline">\(G\rightarrow G\)</span> &#x9009;&#x53D6;n-k&#x4E2A;&#x7EBF;&#x6027;&#x72EC;&#x7ACB;&#x7684;&#x5411;&#x91CF;<span class="math inline">\(y\_1,y\_2,\dots,y\_{n-k}\)</span>&#x4E0E;G&#x7684;&#x6BCF;&#x4E00;&#x5217;&#x6B63;&#x4EA4;&#xFF0C;H&#x7684;&#x884C;&#x5C31;&#x662F;<span class="math inline">\(y\_1^T,y\_2^T,\dots,y\_{n-k}^T\)</span></li>
 </ul>
-<p><strong>error syndrome</strong> 如果y是x的码字，存在一个错误e使得<span class="math inline">\(y&#39;=y+e\)</span>，那么error syndrome就是<span class="math inline">\(Hy&#39;=He\)</span>，不同的错误<span class="math inline">\(e\_j\)</span>有不同的<span class="math inline">\(He\_j\)</span></p>
-<p><strong>Hamming距离</strong> 两个码字x和y之间bit不同的数量称为Hamming距离，记作<span class="math inline">\(d(x,y)\)</span></p>
-<p><strong>Hamming权</strong> x的Hamming权是到0的距离，也就是x中1的个数</p>
-<p><strong>编码的距离</strong> 是指 <span class="math display">\[
+<p><strong>error syndrome</strong> &#x5982;&#x679C;y&#x662F;x&#x7684;&#x7801;&#x5B57;&#xFF0C;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;e&#x4F7F;&#x5F97;<span class="math inline">\(y&apos;=y+e\)</span>&#xFF0C;&#x90A3;&#x4E48;error syndrome&#x5C31;&#x662F;<span class="math inline">\(Hy&apos;=He\)</span>&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x9519;&#x8BEF;<span class="math inline">\(e\_j\)</span>&#x6709;&#x4E0D;&#x540C;&#x7684;<span class="math inline">\(He\_j\)</span></p>
+<p><strong>Hamming&#x8DDD;&#x79BB;</strong> &#x4E24;&#x4E2A;&#x7801;&#x5B57;x&#x548C;y&#x4E4B;&#x95F4;bit&#x4E0D;&#x540C;&#x7684;&#x6570;&#x91CF;&#x79F0;&#x4E3A;Hamming&#x8DDD;&#x79BB;&#xFF0C;&#x8BB0;&#x4F5C;<span class="math inline">\(d(x,y)\)</span></p>
+<p><strong>Hamming&#x6743;</strong> x&#x7684;Hamming&#x6743;&#x662F;&#x5230;0&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;x&#x4E2D;1&#x7684;&#x4E2A;&#x6570;</p>
+<p><strong>&#x7F16;&#x7801;&#x7684;&#x8DDD;&#x79BB;</strong> &#x662F;&#x6307; <span class="math display">\[
 \begin{align}
 d(C)&amp;\equiv \min\_{x,y\in C,x\neq y}{d(x,y)}= \min\_{x\in C,x\neq 0}{wt(x)}
 \end{align}
 \]</span></p>
-<p>如果一个编码满足<span class="math inline">\(d(C)\geq 2t+1\)</span>，那么它就能够对t个bit进行纠错，所以不能使用的编码<span class="math inline">\(y&#39;\)</span>就满足<span class="math inline">\(d(y,y&#39;)\leq t\)</span></p>
-<h1 id="css码">CSS码</h1>
-<p><span class="math inline">\(C\_1\)</span>和<span class="math inline">\(C\_2\)</span>是[<span class="math inline">\(n,k\_1\)</span>]和[<span class="math inline">\(n,k\_2\)</span>]的线性编码，并且有<span class="math inline">\(C\_2\in C\_1\)</span>，并且<span class="math inline">\(C\_1,C\_2\)</span>都能够改正t bit错误。我们定义[<span class="math inline">\(n,k\_1-k\_2\)</span>]的量子编码，能够改正t bit错误。假设<span class="math inline">\(x\in C\_1\)</span>是一个<span class="math inline">\(C\_1\)</span>的码字，那么量子态<span class="math inline">\(|x+C\_2\rangle\)</span>可以定义为</p>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7F16;&#x7801;&#x6EE1;&#x8DB3;<span class="math inline">\(d(C)\geq 2t+1\)</span>&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x80FD;&#x591F;&#x5BF9;t&#x4E2A;bit&#x8FDB;&#x884C;&#x7EA0;&#x9519;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7684;&#x7F16;&#x7801;<span class="math inline">\(y&apos;\)</span>&#x5C31;&#x6EE1;&#x8DB3;<span class="math inline">\(d(y,y&apos;)\leq t\)</span></p>
+<h1 id="css-ma"><a href="#css-ma" class="header-anchor">#</a> CSS&#x7801;</h1>
+<p><span class="math inline">\(C\_1\)</span>&#x548C;<span class="math inline">\(C\_2\)</span>&#x662F;[<span class="math inline">\(n,k\_1\)</span>]&#x548C;[<span class="math inline">\(n,k\_2\)</span>]&#x7684;&#x7EBF;&#x6027;&#x7F16;&#x7801;&#xFF0C;&#x5E76;&#x4E14;&#x6709;<span class="math inline">\(C\_2\in C\_1\)</span>&#xFF0C;&#x5E76;&#x4E14;<span class="math inline">\(C\_1,C\_2\)</span>&#x90FD;&#x80FD;&#x591F;&#x6539;&#x6B63;t bit&#x9519;&#x8BEF;&#x3002;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;[<span class="math inline">\(n,k\_1-k\_2\)</span>]&#x7684;&#x91CF;&#x5B50;&#x7F16;&#x7801;&#xFF0C;&#x80FD;&#x591F;&#x6539;&#x6B63;t bit&#x9519;&#x8BEF;&#x3002;&#x5047;&#x8BBE;<span class="math inline">\(x\in C\_1\)</span>&#x662F;&#x4E00;&#x4E2A;<span class="math inline">\(C\_1\)</span>&#x7684;&#x7801;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x91CF;&#x5B50;&#x6001;<span class="math inline">\(|x+C\_2\rangle\)</span>&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;</p>
 <p><span class="math display">\[
 |x+C\_2\rangle \equiv \frac{1}{|C\_2|}\sum\_{y\in C\_2}|x+y\rangle
 \]</span></p>
 <ul>
-<li>当有<span class="math inline">\(x&#39;-x\in C\_2\)</span>就有<span class="math inline">\(\|x+C\_2\rangle = |x&#39;+C\_2\rangle\)</span>，所以它是<span class="math inline">\(C\_1/C\_2\)</span>的陪集</li>
-<li>对于<span class="math inline">\(C\_2\)</span>两个不同的陪集，所对应的态<span class="math inline">\(|x+C\_2\rangle\)</span>和<span class="math inline">\(|x&#39;+C\_2\rangle\)</span>是正交的</li>
-<li>CSS码的维数是<span class="math inline">\(|C\_1|/|C\_2|=2^{k\_1-k\_2}\)</span>，所以CSS码是一个<span class="math inline">\([n,k\_1-k\_2]\)</span>的量子编码</li>
+<li>&#x5F53;&#x6709;<span class="math inline">\(x&apos;-x\in C\_2\)</span>&#x5C31;&#x6709;<span class="math inline">\(\|x+C\_2\rangle = |x&apos;+C\_2\rangle\)</span>&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x662F;<span class="math inline">\(C\_1/C\_2\)</span>&#x7684;&#x966A;&#x96C6;</li>
+<li>&#x5BF9;&#x4E8E;<span class="math inline">\(C\_2\)</span>&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x966A;&#x96C6;&#xFF0C;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x6001;<span class="math inline">\(|x+C\_2\rangle\)</span>&#x548C;<span class="math inline">\(|x&apos;+C\_2\rangle\)</span>&#x662F;&#x6B63;&#x4EA4;&#x7684;</li>
+<li>CSS&#x7801;&#x7684;&#x7EF4;&#x6570;&#x662F;<span class="math inline">\(|C\_1|/|C\_2|=2^{k\_1-k\_2}\)</span>&#xFF0C;&#x6240;&#x4EE5;CSS&#x7801;&#x662F;&#x4E00;&#x4E2A;<span class="math inline">\([n,k\_1-k\_2]\)</span>&#x7684;&#x91CF;&#x5B50;&#x7F16;&#x7801;</li>
 </ul>
-<p>CSS码能够纠正t比特的相位翻转和比特翻转错误。假设发生了一比特翻转错误记为<span class="math inline">\(e\_1\)</span>，比特翻转发生在<span class="math inline">\(e\_1\)</span>的第一个，相位翻转发生在<span class="math inline">\(e\_2\)</span>的第一个</p>
+<p>CSS&#x7801;&#x80FD;&#x591F;&#x7EA0;&#x6B63;t&#x6BD4;&#x7279;&#x7684;&#x76F8;&#x4F4D;&#x7FFB;&#x8F6C;&#x548C;&#x6BD4;&#x7279;&#x7FFB;&#x8F6C;&#x9519;&#x8BEF;&#x3002;&#x5047;&#x8BBE;&#x53D1;&#x751F;&#x4E86;&#x4E00;&#x6BD4;&#x7279;&#x7FFB;&#x8F6C;&#x9519;&#x8BEF;&#x8BB0;&#x4E3A;<span class="math inline">\(e\_1\)</span>&#xFF0C;&#x6BD4;&#x7279;&#x7FFB;&#x8F6C;&#x53D1;&#x751F;&#x5728;<span class="math inline">\(e\_1\)</span>&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#xFF0C;&#x76F8;&#x4F4D;&#x7FFB;&#x8F6C;&#x53D1;&#x751F;&#x5728;<span class="math inline">\(e\_2\)</span>&#x7684;&#x7B2C;&#x4E00;&#x4E2A;</p>
 <p><span class="math display">\[
 \frac{1}{\sqrt{|C\_2|}}\sum\_{y\in C\_2} (-1)^{(x+y)\cdot e\_2} |x+y+e\_1\rangle
 \]</span></p>
-<p>为了纠正并且发现比特翻转错误 - 引入一个初始化为0的ancilla态，并保证有足够的位数来存储<span class="math inline">\(C\_1\)</span>编码的syndrome - 通过可逆计算来将<span class="math inline">\(C\_1\)</span>的奇偶检验矩阵<span class="math inline">\(H\_1\)</span>作用在引入的态上 <span class="math display">\[
+<p>&#x4E3A;&#x4E86;&#x7EA0;&#x6B63;&#x5E76;&#x4E14;&#x53D1;&#x73B0;&#x6BD4;&#x7279;&#x7FFB;&#x8F6C;&#x9519;&#x8BEF; - &#x5F15;&#x5165;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x5316;&#x4E3A;0&#x7684;ancilla&#x6001;&#xFF0C;&#x5E76;&#x4FDD;&#x8BC1;&#x6709;&#x8DB3;&#x591F;&#x7684;&#x4F4D;&#x6570;&#x6765;&#x5B58;&#x50A8;<span class="math inline">\(C\_1\)</span>&#x7F16;&#x7801;&#x7684;syndrome - &#x901A;&#x8FC7;&#x53EF;&#x9006;&#x8BA1;&#x7B97;&#x6765;&#x5C06;<span class="math inline">\(C\_1\)</span>&#x7684;&#x5947;&#x5076;&#x68C0;&#x9A8C;&#x77E9;&#x9635;<span class="math inline">\(H\_1\)</span>&#x4F5C;&#x7528;&#x5728;&#x5F15;&#x5165;&#x7684;&#x6001;&#x4E0A; <span class="math display">\[
 |x+y+e\_1\rangle|0\rangle \rightarrow |x+y+e\_1\rangle |H\_1(x+y+e\_1)\rangle = |x+y+e\_1\rangle |H\_1(e\_1)\rangle
 \]</span></p>
-<p>就得到了态 <span class="math display">\[
+<p>&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x6001; <span class="math display">\[
 \frac{1}{\sqrt{C\_2}}sum\_{y\in C\_2} (-1)^{(x+y)\cdot e\_2}|x+y+e\_1\rangle |H\_1(e\_1)\rangle
 \]</span></p>
 <ul>
-<li><p>测量这个ancilla态就获得了<span class="math inline">\(He\_1\)</span>然后丢弃ancilla态，得到 <span class="math display">\[
+<li><p>&#x6D4B;&#x91CF;&#x8FD9;&#x4E2A;ancilla&#x6001;&#x5C31;&#x83B7;&#x5F97;&#x4E86;<span class="math inline">\(He\_1\)</span>&#x7136;&#x540E;&#x4E22;&#x5F03;ancilla&#x6001;&#xFF0C;&#x5F97;&#x5230; <span class="math display">\[
 \frac{1}{\sqrt{C\_2}}\sum\_{y\in C\_2} (-1)^{(x+y)\cdot e\_2}|x+y+e\_1\rangle
 \]</span></p></li>
-<li>由于<span class="math inline">\(C\_1\)</span>能够纠正t个错误，所以可以通过<span class="math inline">\(He\_1\)</span>推测出错误<span class="math inline">\(e\_1\)</span></li>
-<li><p>对出现<span class="math inline">\(e\_1\)</span>错误的qubit做非门，就有 <span class="math display">\[
+<li>&#x7531;&#x4E8E;<span class="math inline">\(C\_1\)</span>&#x80FD;&#x591F;&#x7EA0;&#x6B63;t&#x4E2A;&#x9519;&#x8BEF;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<span class="math inline">\(He\_1\)</span>&#x63A8;&#x6D4B;&#x51FA;&#x9519;&#x8BEF;<span class="math inline">\(e\_1\)</span></li>
+<li><p>&#x5BF9;&#x51FA;&#x73B0;<span class="math inline">\(e\_1\)</span>&#x9519;&#x8BEF;&#x7684;qubit&#x505A;&#x975E;&#x95E8;&#xFF0C;&#x5C31;&#x6709; <span class="math display">\[
 \frac{1}{\sqrt{|C\_2|}} \sum\_{y\in C\_2} (-1)^{(x+y)\cdot e\_2}|x+y\rangle
 \]</span></p></li>
-<li>为了找到并纠正相位翻转错误</li>
-<li>对每一个bit使用Hadamard门，就有 <span class="math display">\[
+<li>&#x4E3A;&#x4E86;&#x627E;&#x5230;&#x5E76;&#x7EA0;&#x6B63;&#x76F8;&#x4F4D;&#x7FFB;&#x8F6C;&#x9519;&#x8BEF;</li>
+<li>&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;bit&#x4F7F;&#x7528;Hadamard&#x95E8;&#xFF0C;&#x5C31;&#x6709; <span class="math display">\[
 \frac{1}{\sqrt{|C\_2|}2^n}\sum\_z \sum\_{y\in C\_2} (-1)^{(x+y)\cdot (e\_2+z)}|z\rangle\\
-= \frac{1}{\sqrt{|C\_2|w^n}}\sum\_{z&#39;}\sum\_{y\in C\_2}(-1)^{(x+y)\cdot z&#39;}|z&#39;+e\_2\rangle,\quad z&#39;\equiv z+e\_2
+= \frac{1}{\sqrt{|C\_2|w^n}}\sum\_{z&apos;}\sum\_{y\in C\_2}(-1)^{(x+y)\cdot z&apos;}|z&apos;+e\_2\rangle,\quad z&apos;\equiv z+e\_2
 \]</span></li>
-<li><p>假设<span class="math inline">\(z&#39;\in C\_2^{\perp}\)</span>，那么这个态就可以被写成 <span class="math display">\[
-\frac{1}{\sqrt{|C\_2|2^n}} \sum\_{z&#39;\in C\_2^{\perp}} (-1)^{x\cdot z&#39;}|z&#39;+e\_2\rangle
+<li><p>&#x5047;&#x8BBE;<span class="math inline">\(z&apos;\in C\_2^{\perp}\)</span>&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x6001;&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x5199;&#x6210; <span class="math display">\[
+\frac{1}{\sqrt{|C\_2|2^n}} \sum\_{z&apos;\in C\_2^{\perp}} (-1)^{x\cdot z&apos;}|z&apos;+e\_2\rangle
 \]</span></p></li>
 </ul>
 
@@ -426,6 +426,16 @@ d(C)&amp;\equiv \min\_{x,y\in C,x\neq y}{d(x,y)}= \min\_{x\in C,x\neq 0}{wt(x)}
 </script>
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+    <span class="fa-stack fa-lg">
+        <i class="fa fa-arrow-up fa-stack-1x"></i>
+    </span>
+</div>
+
+
+<script src="/js/totop.js"></script>
+
 
 </body>
 

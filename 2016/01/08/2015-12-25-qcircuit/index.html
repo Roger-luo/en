@@ -205,79 +205,79 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="量子线路模型">量子线路模型</h1>
-<h2 id="经典逻辑门">经典逻辑门</h2>
+                <h1 id="liang-zi-xian-lu-mo-xing"><a href="#liang-zi-xian-lu-mo-xing" class="header-anchor">#</a> &#x91CF;&#x5B50;&#x7EBF;&#x8DEF;&#x6A21;&#x578B;</h1>
+<h2 id="jing-dian-luo-ji-men"><a href="#jing-dian-luo-ji-men" class="header-anchor">#</a> &#x7ECF;&#x5178;&#x903B;&#x8F91;&#x95E8;</h2>
 <ul>
 <li>{NOT,AND,OR,COPY}</li>
 <li>{NAND/NOR,COPY}</li>
-<li>如果有一个常熟bit那么基本门可以只用一个NAND门</li>
+<li>&#x5982;&#x679C;&#x6709;&#x4E00;&#x4E2A;&#x5E38;&#x719F;bit&#x90A3;&#x4E48;&#x57FA;&#x672C;&#x95E8;&#x53EF;&#x4EE5;&#x53EA;&#x7528;&#x4E00;&#x4E2A;NAND&#x95E8;</li>
 </ul>
-<h2 id="量子逻辑门和经典逻辑门的区别">量子逻辑门和经典逻辑门的区别</h2>
+<h2 id="liang-zi-luo-ji-men-he-jing-dian-luo-ji-men-de-qu-bie"><a href="#liang-zi-luo-ji-men-he-jing-dian-luo-ji-men-de-qu-bie" class="header-anchor">#</a> &#x91CF;&#x5B50;&#x903B;&#x8F91;&#x95E8;&#x548C;&#x7ECF;&#x5178;&#x903B;&#x8F91;&#x95E8;&#x7684;&#x533A;&#x522B;</h2>
 <ul>
-<li>COPY 在量子计算中不能直接实现(不可克隆)</li>
-<li>量子逻辑门可逆</li>
+<li>COPY &#x5728;&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x4E2D;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5B9E;&#x73B0;(&#x4E0D;&#x53EF;&#x514B;&#x9686;)</li>
+<li>&#x91CF;&#x5B50;&#x903B;&#x8F91;&#x95E8;&#x53EF;&#x9006;</li>
 </ul>
-<h2 id="可逆计算门">可逆计算门</h2>
+<h2 id="ke-ni-ji-suan-men"><a href="#ke-ni-ji-suan-men" class="header-anchor">#</a> &#x53EF;&#x9006;&#x8BA1;&#x7B97;&#x95E8;</h2>
 <ul>
-<li>可逆门可以<span class="math inline">\(f:{0,1}^n\rightarrow {0,1}^n\)</span>可以看作是<span class="math inline">\(2^n\)</span>长字符串的排列</li>
-<li>对于1-bit门，可逆门为<span class="math inline">\({I,NOT}\)</span></li>
-<li>2-bit门有<span class="math inline">\((2^2)!\)</span>个可逆门，比如<span class="math inline">\(XOR:(x,y)\rightarrow (x,x\oplus y)\)</span></li>
-<li>一比特或两比特门不是可逆计算的通用门。他们是线性的，不能够计算非线性门，比如Toffoli门</li>
-<li>3-bit Toffoli门是非线性门 <span class="math display">\[
+<li>&#x53EF;&#x9006;&#x95E8;&#x53EF;&#x4EE5;<span class="math inline">\(f:{0,1}^n\rightarrow {0,1}^n\)</span>&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;<span class="math inline">\(2^n\)</span>&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6392;&#x5217;</li>
+<li>&#x5BF9;&#x4E8E;1-bit&#x95E8;&#xFF0C;&#x53EF;&#x9006;&#x95E8;&#x4E3A;<span class="math inline">\({I,NOT}\)</span></li>
+<li>2-bit&#x95E8;&#x6709;<span class="math inline">\((2^2)!\)</span>&#x4E2A;&#x53EF;&#x9006;&#x95E8;&#xFF0C;&#x6BD4;&#x5982;<span class="math inline">\(XOR:(x,y)\rightarrow (x,x\oplus y)\)</span></li>
+<li>&#x4E00;&#x6BD4;&#x7279;&#x6216;&#x4E24;&#x6BD4;&#x7279;&#x95E8;&#x4E0D;&#x662F;&#x53EF;&#x9006;&#x8BA1;&#x7B97;&#x7684;&#x901A;&#x7528;&#x95E8;&#x3002;&#x4ED6;&#x4EEC;&#x662F;&#x7EBF;&#x6027;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x591F;&#x8BA1;&#x7B97;&#x975E;&#x7EBF;&#x6027;&#x95E8;&#xFF0C;&#x6BD4;&#x5982;Toffoli&#x95E8;</li>
+<li>3-bit Toffoli&#x95E8;&#x662F;&#x975E;&#x7EBF;&#x6027;&#x95E8; <span class="math display">\[
 \theta^{(3)}: (x,y,z)\rightarrow (x,y,z\oplus x\land y)
 \]</span></li>
 </ul>
-<h2 id="基本量子逻辑门">基本量子逻辑门</h2>
-<h2 id="在量子线路模型下量子计算被分为以下部分">在量子线路模型下，量子计算被分为以下部分</h2>
+<h2 id="ji-ben-liang-zi-luo-ji-men"><a href="#ji-ben-liang-zi-luo-ji-men" class="header-anchor">#</a> &#x57FA;&#x672C;&#x91CF;&#x5B50;&#x903B;&#x8F91;&#x95E8;</h2>
+<h2 id="zai-liang-zi-xian-lu-mo-xing-xia-liang-zi-ji-suan-bei-fen-wei-yi-xia-bu-fen"><a href="#zai-liang-zi-xian-lu-mo-xing-xia-liang-zi-ji-suan-bei-fen-wei-yi-xia-bu-fen" class="header-anchor">#</a> &#x5728;&#x91CF;&#x5B50;&#x7EBF;&#x8DEF;&#x6A21;&#x578B;&#x4E0B;&#xFF0C;&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x88AB;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x90E8;&#x5206;</h2>
 <ul>
-<li>n个量子态<span class="math inline">\(\|00\dots 0\rangle\)</span>被制备</li>
-<li>用有限的量子逻辑门组成量子线路对这些qubit进行操作</li>
-<li>对部分qubit进行Von Neumann测量，将它们投影到基<span class="math inline">\({\|0\rangle,\|1\rangle}\)</span>测量结果就是计算结果</li>
+<li>n&#x4E2A;&#x91CF;&#x5B50;&#x6001;<span class="math inline">\(\|00\dots 0\rangle\)</span>&#x88AB;&#x5236;&#x5907;</li>
+<li>&#x7528;&#x6709;&#x9650;&#x7684;&#x91CF;&#x5B50;&#x903B;&#x8F91;&#x95E8;&#x7EC4;&#x6210;&#x91CF;&#x5B50;&#x7EBF;&#x8DEF;&#x5BF9;&#x8FD9;&#x4E9B;qubit&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</li>
+<li>&#x5BF9;&#x90E8;&#x5206;qubit&#x8FDB;&#x884C;Von Neumann&#x6D4B;&#x91CF;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x6295;&#x5F71;&#x5230;&#x57FA;<span class="math inline">\({\|0\rangle,\|1\rangle}\)</span>&#x6D4B;&#x91CF;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;</li>
 </ul>
-<h2 id="对于这种计算模型">对于这种计算模型</h2>
+<h2 id="dui-yu-zhe-chong-ji-suan-mo-xing"><a href="#dui-yu-zhe-chong-ji-suan-mo-xing" class="header-anchor">#</a> &#x5BF9;&#x4E8E;&#x8FD9;&#x79CD;&#x8BA1;&#x7B97;&#x6A21;&#x578B;</h2>
 <ul>
-<li>Hilbert空间倾向于分解到局部子空间，所以基本的逻辑门应当只对它附近的qubit进行操作</li>
-<li>尽管幺正变换是连续的，但为了获得一般的量子逻辑门，我们需要找到一些离散的集合</li>
-<li>一般测量是POVM，但在一些扩展的系统里我们可以将这些测量转换成Von Neumann测量</li>
-<li>理论上讲，测量可以在任何测量基上完成，但在量子线路中所有的基都会被幺正变换转换成计算基</li>
-<li><strong>推迟测量原理</strong> 总可以把测量从量子线路的中间步骤移到线路的末端rugosa测量的结果被用于线路的某些阶段，则经典的条件运算可以被条件量子计算代替</li>
-<li><strong>隐含测量原理</strong> 不失一般性，量子线路中任何未终结的量子连线(未被测量的量子比特)总可以被假设为被测量</li>
+<li>Hilbert&#x7A7A;&#x95F4;&#x503E;&#x5411;&#x4E8E;&#x5206;&#x89E3;&#x5230;&#x5C40;&#x90E8;&#x5B50;&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x57FA;&#x672C;&#x7684;&#x903B;&#x8F91;&#x95E8;&#x5E94;&#x5F53;&#x53EA;&#x5BF9;&#x5B83;&#x9644;&#x8FD1;&#x7684;qubit&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</li>
+<li>&#x5C3D;&#x7BA1;&#x5E7A;&#x6B63;&#x53D8;&#x6362;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#xFF0C;&#x4F46;&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x4E00;&#x822C;&#x7684;&#x91CF;&#x5B50;&#x903B;&#x8F91;&#x95E8;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x627E;&#x5230;&#x4E00;&#x4E9B;&#x79BB;&#x6563;&#x7684;&#x96C6;&#x5408;</li>
+<li>&#x4E00;&#x822C;&#x6D4B;&#x91CF;&#x662F;POVM&#xFF0C;&#x4F46;&#x5728;&#x4E00;&#x4E9B;&#x6269;&#x5C55;&#x7684;&#x7CFB;&#x7EDF;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E9B;&#x6D4B;&#x91CF;&#x8F6C;&#x6362;&#x6210;Von Neumann&#x6D4B;&#x91CF;</li>
+<li>&#x7406;&#x8BBA;&#x4E0A;&#x8BB2;&#xFF0C;&#x6D4B;&#x91CF;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x6D4B;&#x91CF;&#x57FA;&#x4E0A;&#x5B8C;&#x6210;&#xFF0C;&#x4F46;&#x5728;&#x91CF;&#x5B50;&#x7EBF;&#x8DEF;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x57FA;&#x90FD;&#x4F1A;&#x88AB;&#x5E7A;&#x6B63;&#x53D8;&#x6362;&#x8F6C;&#x6362;&#x6210;&#x8BA1;&#x7B97;&#x57FA;</li>
+<li><strong>&#x63A8;&#x8FDF;&#x6D4B;&#x91CF;&#x539F;&#x7406;</strong> &#x603B;&#x53EF;&#x4EE5;&#x628A;&#x6D4B;&#x91CF;&#x4ECE;&#x91CF;&#x5B50;&#x7EBF;&#x8DEF;&#x7684;&#x4E2D;&#x95F4;&#x6B65;&#x9AA4;&#x79FB;&#x5230;&#x7EBF;&#x8DEF;&#x7684;&#x672B;&#x7AEF;rugosa&#x6D4B;&#x91CF;&#x7684;&#x7ED3;&#x679C;&#x88AB;&#x7528;&#x4E8E;&#x7EBF;&#x8DEF;&#x7684;&#x67D0;&#x4E9B;&#x9636;&#x6BB5;&#xFF0C;&#x5219;&#x7ECF;&#x5178;&#x7684;&#x6761;&#x4EF6;&#x8FD0;&#x7B97;&#x53EF;&#x4EE5;&#x88AB;&#x6761;&#x4EF6;&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x4EE3;&#x66FF;</li>
+<li><strong>&#x9690;&#x542B;&#x6D4B;&#x91CF;&#x539F;&#x7406;</strong> &#x4E0D;&#x5931;&#x4E00;&#x822C;&#x6027;&#xFF0C;&#x91CF;&#x5B50;&#x7EBF;&#x8DEF;&#x4E2D;&#x4EFB;&#x4F55;&#x672A;&#x7EC8;&#x7ED3;&#x7684;&#x91CF;&#x5B50;&#x8FDE;&#x7EBF;(&#x672A;&#x88AB;&#x6D4B;&#x91CF;&#x7684;&#x91CF;&#x5B50;&#x6BD4;&#x7279;)&#x603B;&#x53EF;&#x4EE5;&#x88AB;&#x5047;&#x8BBE;&#x4E3A;&#x88AB;&#x6D4B;&#x91CF;</li>
 </ul>
-<h2 id="对于量子逻辑门有以下基本事实">对于量子逻辑门有以下基本事实</h2>
+<h2 id="dui-yu-liang-zi-luo-ji-men-you-yi-xia-ji-ben-shi-shi"><a href="#dui-yu-liang-zi-luo-ji-men-you-yi-xia-ji-ben-shi-shi" class="header-anchor">#</a> &#x5BF9;&#x4E8E;&#x91CF;&#x5B50;&#x903B;&#x8F91;&#x95E8;&#x6709;&#x4EE5;&#x4E0B;&#x57FA;&#x672C;&#x4E8B;&#x5B9E;</h2>
 <ul>
-<li>对于一个作用于k-qubit的通用门以及它的特征值<span class="math inline">\({e^{i\theta\_1},e^{i\theta\_2},\dots,e^{i\theta\_{2^k}}}\)</span>，<span class="math inline">\(U^n\)</span>稠密的充满了一个<span class="math inline">\(2^k\)</span>维的轮胎，n能够取遍所有正整数，也就是说如果<span class="math inline">\(U=e^{iA}\)</span>，那么<span class="math inline">\(U(\lambda)=e^{i\lambda A}\)</span>可以通过U的任意正整数幂来逼近，这样我们称<span class="math inline">\(U(\lambda)\)</span>是通过U的正整数幂<em>可达到的</em>
+<li>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x4F5C;&#x7528;&#x4E8E;k-qubit&#x7684;&#x901A;&#x7528;&#x95E8;&#x4EE5;&#x53CA;&#x5B83;&#x7684;&#x7279;&#x5F81;&#x503C;<span class="math inline">\({e^{i\theta\_1},e^{i\theta\_2},\dots,e^{i\theta\_{2^k}}}\)</span>&#xFF0C;<span class="math inline">\(U^n\)</span>&#x7A20;&#x5BC6;&#x7684;&#x5145;&#x6EE1;&#x4E86;&#x4E00;&#x4E2A;<span class="math inline">\(2^k\)</span>&#x7EF4;&#x7684;&#x8F6E;&#x80CE;&#xFF0C;n&#x80FD;&#x591F;&#x53D6;&#x904D;&#x6240;&#x6709;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5982;&#x679C;<span class="math inline">\(U=e^{iA}\)</span>&#xFF0C;&#x90A3;&#x4E48;<span class="math inline">\(U(\lambda)=e^{i\lambda A}\)</span>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;U&#x7684;&#x4EFB;&#x610F;&#x6B63;&#x6574;&#x6570;&#x5E42;&#x6765;&#x903C;&#x8FD1;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x79F0;<span class="math inline">\(U(\lambda)\)</span>&#x662F;&#x901A;&#x8FC7;U&#x7684;&#x6B63;&#x6574;&#x6570;&#x5E42;<em>&#x53EF;&#x8FBE;&#x5230;&#x7684;</em>
 <ul>
-<li>其中<span class="math inline">\(\theta\_i\)</span>是<span class="math inline">\(\pi\)</span>的无理数倍，所有的<span class="math inline">\(\theta\_i\)</span>都是没有有理数比的</li>
+<li>&#x5176;&#x4E2D;<span class="math inline">\(\theta\_i\)</span>&#x662F;<span class="math inline">\(\pi\)</span>&#x7684;&#x65E0;&#x7406;&#x6570;&#x500D;&#xFF0C;&#x6240;&#x6709;&#x7684;<span class="math inline">\(\theta\_i\)</span>&#x90FD;&#x662F;&#x6CA1;&#x6709;&#x6709;&#x7406;&#x6570;&#x6BD4;&#x7684;</li>
 </ul></li>
-<li><p>为了能够让门<span class="math inline">\(U\)</span>对不同qubit进行操作，可以通过交换qubit的顺序实现。首先对k个bit长的字符串，<span class="math inline">\((2^k)!\)</span>个排列可以通过交换qubit来实现。如果按照原先的顺序让k个qubit通过一个逻辑门U(U按照当前顺序作用)，那么然后P交换其中两个qubit，新的门可写作<span class="math inline">\(U&#39;=PUP^{-1}\)</span></p></li>
-<li><strong>生成元</strong> A是U的生成元，如果<span class="math inline">\(U=e^{iA}\)</span></li>
-<li><p><strong>定理</strong> 如果A，B都是生成元，那么它们的线性组合以及对易子也是生成元 <span class="math display">\[
+<li><p>&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x8BA9;&#x95E8;<span class="math inline">\(U\)</span>&#x5BF9;&#x4E0D;&#x540C;qubit&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EA4;&#x6362;qubit&#x7684;&#x987A;&#x5E8F;&#x5B9E;&#x73B0;&#x3002;&#x9996;&#x5148;&#x5BF9;k&#x4E2A;bit&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;<span class="math inline">\((2^k)!\)</span>&#x4E2A;&#x6392;&#x5217;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EA4;&#x6362;qubit&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x679C;&#x6309;&#x7167;&#x539F;&#x5148;&#x7684;&#x987A;&#x5E8F;&#x8BA9;k&#x4E2A;qubit&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x95E8;U(U&#x6309;&#x7167;&#x5F53;&#x524D;&#x987A;&#x5E8F;&#x4F5C;&#x7528;)&#xFF0C;&#x90A3;&#x4E48;&#x7136;&#x540E;P&#x4EA4;&#x6362;&#x5176;&#x4E2D;&#x4E24;&#x4E2A;qubit&#xFF0C;&#x65B0;&#x7684;&#x95E8;&#x53EF;&#x5199;&#x4F5C;<span class="math inline">\(U&apos;=PUP^{-1}\)</span></p></li>
+<li><strong>&#x751F;&#x6210;&#x5143;</strong> A&#x662F;U&#x7684;&#x751F;&#x6210;&#x5143;&#xFF0C;&#x5982;&#x679C;<span class="math inline">\(U=e^{iA}\)</span></li>
+<li><p><strong>&#x5B9A;&#x7406;</strong> &#x5982;&#x679C;A&#xFF0C;B&#x90FD;&#x662F;&#x751F;&#x6210;&#x5143;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4EEC;&#x7684;&#x7EBF;&#x6027;&#x7EC4;&#x5408;&#x4EE5;&#x53CA;&#x5BF9;&#x6613;&#x5B50;&#x4E5F;&#x662F;&#x751F;&#x6210;&#x5143; <span class="math display">\[
 \lim\_{n\rightarrow \infty}(e^{i\alpha A/n}e^{i\beta B/n})^{n} = \lim\_{n\rightarrow \infty}(1+\frac{i}{n}(\alpha A+\beta B))^n = e^{i(\alpha A+\beta B)}
 \]</span> <span class="math display">\[
 \lim\_{n\rightarrow \infty}(e^{iA/\sqrt{n}}e^{iB/\sqrt{n}}e^{-iA/\sqrt{n}}e^{-iB/\sqrt{n}})^n = \lim\_{n\rightarrow \infty}[1-\frac{1}{n}(AB-BA)]^n = e^{-[A,B]}
 \]</span></p></li>
 </ul>
-<p>(不是很清楚上面的性质如何证明reachable transform构成一个完备的李代数的)</p>
-<h2 id="deutsch门">Deutsch门</h2>
-<p>如果其余两个qubit为1,就对第三个qubit进行R操作，否则什么都不做其中 <span class="math display">\[
+<p>(&#x4E0D;&#x662F;&#x5F88;&#x6E05;&#x695A;&#x4E0A;&#x9762;&#x7684;&#x6027;&#x8D28;&#x5982;&#x4F55;&#x8BC1;&#x660E;reachable transform&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x5B8C;&#x5907;&#x7684;&#x674E;&#x4EE3;&#x6570;&#x7684;)</p>
+<h2 id="deutsch-men"><a href="#deutsch-men" class="header-anchor">#</a> Deutsch&#x95E8;</h2>
+<p>&#x5982;&#x679C;&#x5176;&#x4F59;&#x4E24;&#x4E2A;qubit&#x4E3A;1,&#x5C31;&#x5BF9;&#x7B2C;&#x4E09;&#x4E2A;qubit&#x8FDB;&#x884C;R&#x64CD;&#x4F5C;&#xFF0C;&#x5426;&#x5219;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x505A;&#x5176;&#x4E2D; <span class="math display">\[
 \mathbf{R} = -i\mathbf{R}\_x(\theta) = (-i)exp(i\frac{\theta}{2}\mathbf{\sigma}\_x)=(-i)(\cos{\frac{\theta}{2}}+i\mathbf{\sigma}\_x\sin{\frac{\theta}{2}})
-\]</span> 其中<span class="math inline">\(\theta\)</span>是<span class="math inline">\(\pi\)</span>的无理数倍，Deutsch门的通用性有以下几个方面</p>
+\]</span> &#x5176;&#x4E2D;<span class="math inline">\(\theta\)</span>&#x662F;<span class="math inline">\(\pi\)</span>&#x7684;&#x65E0;&#x7406;&#x6570;&#x500D;&#xFF0C;Deutsch&#x95E8;&#x7684;&#x901A;&#x7528;&#x6027;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x65B9;&#x9762;</p>
 <ul>
-<li>(4n+1)次可以任意接近<span class="math inline">\(\sigma\_x\)</span> <span class="math display">\[
+<li>(4n+1)&#x6B21;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x63A5;&#x8FD1;<span class="math inline">\(\sigma\_x\)</span> <span class="math display">\[
 (-i)[\cos{\frac{(4n+1)\theta}{2}}+i\mathbf{\sigma}\_x\sin{\frac{(4n+1)\theta}{2}}]
 \]</span></li>
-<li>Toffoli门可以由Deutch门实现，所以Deutsch是可逆计算的通用门</li>
+<li>Toffoli&#x95E8;&#x53EF;&#x4EE5;&#x7531;Deutch&#x95E8;&#x5B9E;&#x73B0;&#xFF0C;&#x6240;&#x4EE5;Deutsch&#x662F;&#x53EF;&#x9006;&#x8BA1;&#x7B97;&#x7684;&#x901A;&#x7528;&#x95E8;</li>
 </ul>
-<h2 id="两比特门">两比特门</h2>
+<h2 id="liang-bi-te-men"><a href="#liang-bi-te-men" class="header-anchor">#</a> &#x4E24;&#x6BD4;&#x7279;&#x95E8;</h2>
 <ul>
-<li>两比特门可以实现Deutsch门(<span class="math inline">\(C-U,C-U^-1,C-NOT\)</span>)
+<li>&#x4E24;&#x6BD4;&#x7279;&#x95E8;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;Deutsch&#x95E8;(<span class="math inline">\(C-U,C-U^-1,C-NOT\)</span>)
 <ul>
-<li>其中<span class="math inline">\(U=e^{-i\pi/4}\cdot R\_x(\frac{\theta}{2})\)</span></li>
+<li>&#x5176;&#x4E2D;<span class="math inline">\(U=e^{-i\pi/4}\cdot R\_x(\frac{\theta}{2})\)</span></li>
 </ul></li>
-<li>基本上所有的两比特门都是通用的
+<li>&#x57FA;&#x672C;&#x4E0A;&#x6240;&#x6709;&#x7684;&#x4E24;&#x6BD4;&#x7279;&#x95E8;&#x90FD;&#x662F;&#x901A;&#x7528;&#x7684;
 <ul>
-<li>C-NOT和单比特门可以组成通用门集合</li>
-<li>任何C-U门都能通过C-NOT门和单比特门的组合实现(<span class="math inline">\(ABC=1\quad A\sigma\_x B\sigma\_x C=U\)</span>)</li>
+<li>C-NOT&#x548C;&#x5355;&#x6BD4;&#x7279;&#x95E8;&#x53EF;&#x4EE5;&#x7EC4;&#x6210;&#x901A;&#x7528;&#x95E8;&#x96C6;&#x5408;</li>
+<li>&#x4EFB;&#x4F55;C-U&#x95E8;&#x90FD;&#x80FD;&#x901A;&#x8FC7;C-NOT&#x95E8;&#x548C;&#x5355;&#x6BD4;&#x7279;&#x95E8;&#x7684;&#x7EC4;&#x5408;&#x5B9E;&#x73B0;(<span class="math inline">\(ABC=1\quad A\sigma\_x B\sigma\_x C=U\)</span>)</li>
 </ul></li>
 </ul>
 
@@ -445,6 +445,16 @@
 </script>
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+    <span class="fa-stack fa-lg">
+        <i class="fa fa-arrow-up fa-stack-1x"></i>
+    </span>
+</div>
+
+
+<script src="/js/totop.js"></script>
+
 
 </body>
 

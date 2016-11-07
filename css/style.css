@@ -724,3 +724,27 @@ pre .clojure .title {
 pre .deletion {
   color: #dc322f;
 }
+#toc {
+  float: right;
+  font-size: 0.8em;
+  margin: 5px;
+  position: relative;
+  left: 50px;
+  background-color: rgba(255,255,255,0.8);
+}
+#toc .toc {
+  list-style: none;
+  padding: 10px;
+}
+#toc .toc-item,
+#toc .toc-link {
+  list-style: none;
+}
+#toc ol {
+  margin: 0;
+}
+@media screen and (max-width: 640px) {
+  #toc {
+    display: none;
+  }
+}
