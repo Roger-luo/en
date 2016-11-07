@@ -205,44 +205,39 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1>One-way 模型</h1>
-<h2>图态</h2>
+                <h1 id="one-way-模型">One-way 模型</h1>
+<h2 id="图态">图态</h2>
 <p>对于给定的图有两种定义图态的方式</p>
 <ul>
 <li>用操作定义(适用于制备图态)
 <ul>
-<li>将所有qubit制备成$|+\rangle$</li>
+<li>将所有qubit制备成<span class="math inline">\(\|+\rangle\)</span></li>
 <li>对有边的qubit进行CZ操作</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<p>$$
+<p><span class="math display">\[
 CZ =
 \begin{pmatrix}
-1 &amp;\<br>
-&amp; 1\<br>
-&amp;    &amp; 1\<br>
-&amp;    &amp;   &amp; -1\<br>
+1 &amp;\\\
+   &amp; 1\\\
+   &amp;    &amp; 1\\\
+   &amp;    &amp;   &amp; -1\\\
 \end{pmatrix}
-$$</p>
+\]</span></p>
 <p>因为CZ门对称所以可以看作是有向图的边</p>
-<p>也就是
-$$
-|G\rangle = \prod_{(a,b)\in E} U<sup>{(a,b)}|+\rangle</sup>{\otimes V}
-$$</p>
-<p>其中$U^{(a,b)}$是a,b之间的CZ门</p>
+<p>也就是 <span class="math display">\[
+\|G\rangle = \prod\_{(a,b)\in E} U^{(a,b)}\|+\rangle^{\otimes V}
+\]</span></p>
+<p>其中<span class="math inline">\(U^{(a,b)}\)</span>是a,b之间的CZ门</p>
 <ul>
-<li>用stabilizer定义，对于一个顶点a，定义stabilizer为
-$$
-K_a = \sigma_a^x \prod_{b\in N_a} \sigma_b^z
-$$</li>
+<li>用stabilizer定义，对于一个顶点a，定义stabilizer为 <span class="math display">\[
+K\_a = \sigma\_a^x \prod\_{b\in N\_a} \sigma\_b^z
+\]</span></li>
 </ul>
-<p>$N_a$是a的临接点集合，所有的stabilizer都是对易的(这是指什么？)，所有的stabilizer在图态中等于1？</p>
-<p>定义Hamiltonian
-$$
-H = -\sum_a K_a
-$$
-那么$H$的基态就是图态$|G\rangle$</p>
+<p><span class="math inline">\(N\_a\)</span>是a的临接点集合，所有的stabilizer都是对易的(这是指什么？)，所有的stabilizer在图态中等于1？</p>
+<p>定义Hamiltonian <span class="math display">\[
+H = -\sum\_a K\_a
+\]</span> 那么<span class="math inline">\(H\)</span>的基态就是图态<span class="math inline">\(\|G\rangle\)</span></p>
 
 
                 

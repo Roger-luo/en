@@ -547,6 +547,13 @@ body {
 .content-load-button:focus {
   color: rgba(255,255,255,0.8);
 }
+table .odd {
+  background-color: #eee;
+}
+table td,
+table th {
+  padding-left: 15px;
+}
 article .container .row img {
   max-width: 100% !important;
   height: auto;

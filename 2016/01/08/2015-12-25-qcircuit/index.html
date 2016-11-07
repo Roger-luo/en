@@ -205,37 +205,36 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1>量子线路模型</h1>
-<h2>经典逻辑门</h2>
+                <h1 id="量子线路模型">量子线路模型</h1>
+<h2 id="经典逻辑门">经典逻辑门</h2>
 <ul>
 <li>{NOT,AND,OR,COPY}</li>
 <li>{NAND/NOR,COPY}</li>
 <li>如果有一个常熟bit那么基本门可以只用一个NAND门</li>
 </ul>
-<h2>量子逻辑门和经典逻辑门的区别</h2>
+<h2 id="量子逻辑门和经典逻辑门的区别">量子逻辑门和经典逻辑门的区别</h2>
 <ul>
 <li>COPY 在量子计算中不能直接实现(不可克隆)</li>
 <li>量子逻辑门可逆</li>
 </ul>
-<h2>可逆计算门</h2>
+<h2 id="可逆计算门">可逆计算门</h2>
 <ul>
-<li>可逆门可以$f:{0,1}^n\rightarrow {0,1}<sup>n$可以看作是$2</sup>n$长字符串的排列</li>
-<li>对于1-bit门，可逆门为${I,NOT}$</li>
-<li>2-bit门有$(2^2)!$个可逆门，比如$XOR:(x,y)\rightarrow (x,x\oplus y)$</li>
+<li>可逆门可以<span class="math inline">\(f:{0,1}^n\rightarrow {0,1}^n\)</span>可以看作是<span class="math inline">\(2^n\)</span>长字符串的排列</li>
+<li>对于1-bit门，可逆门为<span class="math inline">\({I,NOT}\)</span></li>
+<li>2-bit门有<span class="math inline">\((2^2)!\)</span>个可逆门，比如<span class="math inline">\(XOR:(x,y)\rightarrow (x,x\oplus y)\)</span></li>
 <li>一比特或两比特门不是可逆计算的通用门。他们是线性的，不能够计算非线性门，比如Toffoli门</li>
-<li>3-bit Toffoli门是非线性门
-$$
+<li>3-bit Toffoli门是非线性门 <span class="math display">\[
 \theta^{(3)}: (x,y,z)\rightarrow (x,y,z\oplus x\land y)
-$$</li>
+\]</span></li>
 </ul>
-<h2>基本量子逻辑门</h2>
-<h2>在量子线路模型下，量子计算被分为以下部分</h2>
+<h2 id="基本量子逻辑门">基本量子逻辑门</h2>
+<h2 id="在量子线路模型下量子计算被分为以下部分">在量子线路模型下，量子计算被分为以下部分</h2>
 <ul>
-<li>n个量子态$|00\dots 0\rangle$被制备</li>
+<li>n个量子态<span class="math inline">\(\|00\dots 0\rangle\)</span>被制备</li>
 <li>用有限的量子逻辑门组成量子线路对这些qubit进行操作</li>
-<li>对部分qubit进行Von Neumann测量，将它们投影到基${|0\rangle,|1\rangle}$测量结果就是计算结果</li>
+<li>对部分qubit进行Von Neumann测量，将它们投影到基<span class="math inline">\({\|0\rangle,\|1\rangle}\)</span>测量结果就是计算结果</li>
 </ul>
-<h2>对于这种计算模型</h2>
+<h2 id="对于这种计算模型">对于这种计算模型</h2>
 <ul>
 <li>Hilbert空间倾向于分解到局部子空间，所以基本的逻辑门应当只对它附近的qubit进行操作</li>
 <li>尽管幺正变换是连续的，但为了获得一般的量子逻辑门，我们需要找到一些离散的集合</li>
@@ -244,57 +243,42 @@ $$</li>
 <li><strong>推迟测量原理</strong> 总可以把测量从量子线路的中间步骤移到线路的末端rugosa测量的结果被用于线路的某些阶段，则经典的条件运算可以被条件量子计算代替</li>
 <li><strong>隐含测量原理</strong> 不失一般性，量子线路中任何未终结的量子连线(未被测量的量子比特)总可以被假设为被测量</li>
 </ul>
-<h2>对于量子逻辑门有以下基本事实</h2>
+<h2 id="对于量子逻辑门有以下基本事实">对于量子逻辑门有以下基本事实</h2>
 <ul>
-<li>
-<p>对于一个作用于k-qubit的通用门以及它的特征值${e<sup>{i\theta_1},e</sup>{i\theta_2},\dots,e<sup>{i\theta_{2</sup>k}}}$，$U<sup>n$稠密的充满了一个$2</sup>k$维的轮胎，n能够取遍所有正整数，也就是说如果$U=e<sup>{iA}$，那么$U(\lambda)=e</sup>{i\lambda A}$可以通过U的任意正整数幂来逼近，这样我们称$U(\lambda)$是通过U的正整数幂<em>可达到的</em></p>
+<li>对于一个作用于k-qubit的通用门以及它的特征值<span class="math inline">\({e^{i\theta\_1},e^{i\theta\_2},\dots,e^{i\theta\_{2^k}}}\)</span>，<span class="math inline">\(U^n\)</span>稠密的充满了一个<span class="math inline">\(2^k\)</span>维的轮胎，n能够取遍所有正整数，也就是说如果<span class="math inline">\(U=e^{iA}\)</span>，那么<span class="math inline">\(U(\lambda)=e^{i\lambda A}\)</span>可以通过U的任意正整数幂来逼近，这样我们称<span class="math inline">\(U(\lambda)\)</span>是通过U的正整数幂<em>可达到的</em>
 <ul>
-<li>其中$\theta_i$是$\pi$的无理数倍，所有的$\theta_i$都是没有有理数比的</li>
-</ul>
-</li>
-<li>
-<p>为了能够让门$U$对不同qubit进行操作，可以通过交换qubit的顺序实现。首先对k个bit长的字符串，$(2<sup>k)!$个排列可以通过交换qubit来实现。如果按照原先的顺序让k个qubit通过一个逻辑门U(U按照当前顺序作用)，那么然后P交换其中两个qubit，新的门可写作$U'=PUP</sup>{-1}$</p>
-</li>
-<li>
-<p><strong>生成元</strong> A是U的生成元，如果$U=e^{iA}$</p>
-</li>
-<li>
-<p><strong>定理</strong> 如果A，B都是生成元，那么它们的线性组合以及对易子也是生成元
-$$
-\lim_{n\rightarrow \infty}(e^{i\alpha A/n}e^{i\beta B/n})^{n} = \lim_{n\rightarrow \infty}(1+\frac{i}{n}(\alpha A+\beta B))^n = e^{i(\alpha A+\beta B)}
-$$
-$$
-\lim_{n\rightarrow \infty}(e<sup>{iA/\sqrt{n}}e</sup>{iB/\sqrt{n}}e<sup>{-iA/\sqrt{n}}e</sup>{-iB/\sqrt{n}})^n = \lim_{n\rightarrow \infty}[1-\frac{1}{n}(AB-BA)]^n = e^{-[A,B]}
-$$</p>
-</li>
+<li>其中<span class="math inline">\(\theta\_i\)</span>是<span class="math inline">\(\pi\)</span>的无理数倍，所有的<span class="math inline">\(\theta\_i\)</span>都是没有有理数比的</li>
+</ul></li>
+<li><p>为了能够让门<span class="math inline">\(U\)</span>对不同qubit进行操作，可以通过交换qubit的顺序实现。首先对k个bit长的字符串，<span class="math inline">\((2^k)!\)</span>个排列可以通过交换qubit来实现。如果按照原先的顺序让k个qubit通过一个逻辑门U(U按照当前顺序作用)，那么然后P交换其中两个qubit，新的门可写作<span class="math inline">\(U&#39;=PUP^{-1}\)</span></p></li>
+<li><strong>生成元</strong> A是U的生成元，如果<span class="math inline">\(U=e^{iA}\)</span></li>
+<li><p><strong>定理</strong> 如果A，B都是生成元，那么它们的线性组合以及对易子也是生成元 <span class="math display">\[
+\lim\_{n\rightarrow \infty}(e^{i\alpha A/n}e^{i\beta B/n})^{n} = \lim\_{n\rightarrow \infty}(1+\frac{i}{n}(\alpha A+\beta B))^n = e^{i(\alpha A+\beta B)}
+\]</span> <span class="math display">\[
+\lim\_{n\rightarrow \infty}(e^{iA/\sqrt{n}}e^{iB/\sqrt{n}}e^{-iA/\sqrt{n}}e^{-iB/\sqrt{n}})^n = \lim\_{n\rightarrow \infty}[1-\frac{1}{n}(AB-BA)]^n = e^{-[A,B]}
+\]</span></p></li>
 </ul>
 <p>(不是很清楚上面的性质如何证明reachable transform构成一个完备的李代数的)</p>
-<h2>Deutsch门</h2>
-<p>如果其余两个qubit为1,就对第三个qubit进行R操作，否则什么都不做其中
-$$
-\mathbf{R} = -i\mathbf{R}_x(\theta) = (-i)exp(i\frac{\theta}{2}\mathbf{\sigma}_x)=(-i)(\cos{\frac{\theta}{2}}+i\mathbf{\sigma}_x\sin{\frac{\theta}{2}})
-$$
-其中$\theta$是$\pi$的无理数倍，Deutsch门的通用性有以下几个方面</p>
+<h2 id="deutsch门">Deutsch门</h2>
+<p>如果其余两个qubit为1,就对第三个qubit进行R操作，否则什么都不做其中 <span class="math display">\[
+\mathbf{R} = -i\mathbf{R}\_x(\theta) = (-i)exp(i\frac{\theta}{2}\mathbf{\sigma}\_x)=(-i)(\cos{\frac{\theta}{2}}+i\mathbf{\sigma}\_x\sin{\frac{\theta}{2}})
+\]</span> 其中<span class="math inline">\(\theta\)</span>是<span class="math inline">\(\pi\)</span>的无理数倍，Deutsch门的通用性有以下几个方面</p>
 <ul>
-<li>(4n+1)次可以任意接近$\sigma_x$
-$$
-(-i)[\cos{\frac{(4n+1)\theta}{2}}+i\mathbf{\sigma}_x\sin{\frac{(4n+1)\theta}{2}}]
-$$</li>
+<li>(4n+1)次可以任意接近<span class="math inline">\(\sigma\_x\)</span> <span class="math display">\[
+(-i)[\cos{\frac{(4n+1)\theta}{2}}+i\mathbf{\sigma}\_x\sin{\frac{(4n+1)\theta}{2}}]
+\]</span></li>
 <li>Toffoli门可以由Deutch门实现，所以Deutsch是可逆计算的通用门</li>
 </ul>
-<h2>两比特门</h2>
+<h2 id="两比特门">两比特门</h2>
 <ul>
-<li>两比特门可以实现Deutsch门($C-U,C-U^-1,C-NOT$)
+<li>两比特门可以实现Deutsch门(<span class="math inline">\(C-U,C-U^-1,C-NOT\)</span>)
 <ul>
-<li>其中$U=e^{-i\pi/4}\cdot R_x(\frac{\theta}{2})$</li>
-</ul>
-</li>
+<li>其中<span class="math inline">\(U=e^{-i\pi/4}\cdot R\_x(\frac{\theta}{2})\)</span></li>
+</ul></li>
 <li>基本上所有的两比特门都是通用的
 <ul>
 <li>C-NOT和单比特门可以组成通用门集合</li>
-<li>任何C-U门都能通过C-NOT门和单比特门的组合实现($ABC=1\quad A\sigma_x B\sigma_x C=U$)</li>
-</ul>
-</li>
+<li>任何C-U门都能通过C-NOT门和单比特门的组合实现(<span class="math inline">\(ABC=1\quad A\sigma\_x B\sigma\_x C=U\)</span>)</li>
+</ul></li>
 </ul>
 
 

@@ -205,23 +205,21 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1>Computation complexity</h1>
+                <h1 id="computation-complexity">Computation complexity</h1>
 <ul>
 <li>P problem: 由确定图灵机在多项式时间内解决的问题</li>
 <li>NP problem(non-deterministic) 能够在多项式时间内检验一个解是否正确
 <ul>
-<li>旅行商问题：给定n个城市的两两距离，求找到一个行走方案，使得到达每个城市一次的总路程最短。可以猜测它的解：求一个总路程不超过100的方案，然后猜50...类似二分查找最后运气好也许就猜到这个问题的解了。</li>
-</ul>
-</li>
+<li>旅行商问题：给定n个城市的两两距离，求找到一个行走方案，使得到达每个城市一次的总路程最短。可以猜测它的解：求一个总路程不超过100的方案，然后猜50…类似二分查找最后运气好也许就猜到这个问题的解了。</li>
+</ul></li>
 <li>NP complete：一个决定性问题(decision problem) 是NP完全的，如果
 <ul>
 <li>它是一个NP问题</li>
 <li>所有的NP问题都可以在多项式时间内归约到这个问题</li>
-<li>SAT：一个命题$\gamma$称为可满足式，如果$\gamma$对于其中出现的命题变元的某个指派为成真指派</li>
+<li>SAT：一个命题<span class="math inline">\(\gamma\)</span>称为可满足式，如果<span class="math inline">\(\gamma\)</span>对于其中出现的命题变元的某个指派为成真指派</li>
 <li>例子：3-SAT问题(可满足性问题)：如果一个合取式(合取范式)最多是3个因子的析取式，判断此表达式是否是可满足的，称为3-SAT问题(也就是是否存在使得所有子句为真的指派)，图的染色问题</li>
 <li><a href="http://ccckmit.github.io/ct/htm/NP-Complete.html" target="_blank" rel="external">复杂性问题的一个blog</a></li>
-</ul>
-</li>
+</ul></li>
 <li>BQP :能够被量子计算机在多项式时间内解决的问题</li>
 <li>归约：将某个问题转化为另外一个问题的过程</li>
 </ul>
