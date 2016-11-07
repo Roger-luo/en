@@ -19,8 +19,6 @@
         var scrollBot = $(document).height()-$(window).height()-scrollTop;       
         if ( scrollBot < downLimit ) {
             $(scrollElem).stop().fadeTo(300, 0);
-            console.log('bot');
-            console.log(scrollBot); // fade back in           
         }else if (scrollTop > upperLimit){
             $(scrollElem).stop().fadeTo(300, 1);
         }else{       
