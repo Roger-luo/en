@@ -547,6 +547,9 @@ body {
 .content-load-button:focus {
   color: rgba(255,255,255,0.8);
 }
+table .odd {
+  background-color: #eee;
+}
 table tr .odd {
   background-color: #eee;
 }
