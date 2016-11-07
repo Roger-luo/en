@@ -1,24 +1,15 @@
 #toc {
-  float: right;
   font-size: 0.8em;
-  margin: 5px;
   position: relative;
-  left: 50px;
   background-color: white-faded;
 }
-#toc .toc {
-  list-style: none;
-  padding: 10px;
-}
-#toc .toc-item,
-#toc .toc-link {
-  list-style: none;
-}
-#toc ol {
-  margin: 0;
-}
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 768px) {
   #toc {
-    display: none;
+    float: right;
+    font-size: 0.8em;
+    margin: 5px;
+    position: relative;
+    left: 50px;
+    background-color: white-faded;
   }
 }
