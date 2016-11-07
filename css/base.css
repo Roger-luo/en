@@ -67,6 +67,13 @@ a img:hover,
 a img:focus {
   cursor: zoom-in;
 }
+a.header-anchor {
+  color: transparent;
+}
+a.header-anchor:hover,
+a.header-anchor:focus {
+  color: #808080;
+}
 hr.small {
   max-width: 100px;
   margin: 15px auto;
