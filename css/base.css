@@ -169,7 +169,8 @@ hr.small {
   background-color: #808080;
   background-position: center center;
   background-attachment: scroll;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 100%;
   position: relative;
   margin-bottom: 50px;
 }
@@ -563,4 +564,13 @@ table tr .odd {
 table td,
 table th {
   padding-left: 15px;
+}
+.side-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  cursor: pointer;
+}
+.side-bar .side-bar-elem {
+  position: initial;
 }

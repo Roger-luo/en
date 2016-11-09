@@ -205,23 +205,45 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="computation-complexity">Computation complexity <a href="#computation-complexity" class="header-anchor">#</a></h1>
+                
+<div id="sidebar" class="side-bar">
+    <div id="side-toc" class="btn-group btn-group-lg dropup">
+        <span class="fa-stack fa-lg" data-toggle="dropdown">
+            <i class="fa fa-bars fa-stack-2x"></i>
+        </span>
+        
+        <ul class="dropdown-menu pull-right" role="menu">
+        <ul>
+        <li><a href="#computation-complexity">Computation complexity</a></li>
+        </ul>
+        </ul>
+    </div>
+
+
+    <div id="totop" class="side-bar-elem">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
+        </span>
+    </div>
+</div>
+
+<h1 id="computation-complexity">Computation complexity</h1>
 <ul>
-<li>P problem: &#x7531;&#x786E;&#x5B9A;&#x56FE;&#x7075;&#x673A;&#x5728;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x5185;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;</li>
-<li>NP problem(non-deterministic) &#x80FD;&#x591F;&#x5728;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x5185;&#x68C0;&#x9A8C;&#x4E00;&#x4E2A;&#x89E3;&#x662F;&#x5426;&#x6B63;&#x786E;
+<li>P problem: 由确定图灵机在多项式时间内解决的问题</li>
+<li>NP problem(non-deterministic) 能够在多项式时间内检验一个解是否正确
 <ul>
-<li>&#x65C5;&#x884C;&#x5546;&#x95EE;&#x9898;&#xFF1A;&#x7ED9;&#x5B9A;n&#x4E2A;&#x57CE;&#x5E02;&#x7684;&#x4E24;&#x4E24;&#x8DDD;&#x79BB;&#xFF0C;&#x6C42;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x884C;&#x8D70;&#x65B9;&#x6848;&#xFF0C;&#x4F7F;&#x5F97;&#x5230;&#x8FBE;&#x6BCF;&#x4E2A;&#x57CE;&#x5E02;&#x4E00;&#x6B21;&#x7684;&#x603B;&#x8DEF;&#x7A0B;&#x6700;&#x77ED;&#x3002;&#x53EF;&#x4EE5;&#x731C;&#x6D4B;&#x5B83;&#x7684;&#x89E3;&#xFF1A;&#x6C42;&#x4E00;&#x4E2A;&#x603B;&#x8DEF;&#x7A0B;&#x4E0D;&#x8D85;&#x8FC7;100&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x7136;&#x540E;&#x731C;50&#x2026;&#x7C7B;&#x4F3C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x6700;&#x540E;&#x8FD0;&#x6C14;&#x597D;&#x4E5F;&#x8BB8;&#x5C31;&#x731C;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x89E3;&#x4E86;&#x3002;</li>
+<li>旅行商问题：给定n个城市的两两距离，求找到一个行走方案，使得到达每个城市一次的总路程最短。可以猜测它的解：求一个总路程不超过100的方案，然后猜50…类似二分查找最后运气好也许就猜到这个问题的解了。</li>
 </ul></li>
-<li>NP complete&#xFF1A;&#x4E00;&#x4E2A;&#x51B3;&#x5B9A;&#x6027;&#x95EE;&#x9898;(decision problem) &#x662F;NP&#x5B8C;&#x5168;&#x7684;&#xFF0C;&#x5982;&#x679C;
+<li>NP complete：一个决定性问题(decision problem) 是NP完全的，如果
 <ul>
-<li>&#x5B83;&#x662F;&#x4E00;&#x4E2A;NP&#x95EE;&#x9898;</li>
-<li>&#x6240;&#x6709;&#x7684;NP&#x95EE;&#x9898;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x5185;&#x5F52;&#x7EA6;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</li>
-<li>SAT&#xFF1A;&#x4E00;&#x4E2A;&#x547D;&#x9898;<span class="math inline">\(\gamma\)</span>&#x79F0;&#x4E3A;&#x53EF;&#x6EE1;&#x8DB3;&#x5F0F;&#xFF0C;&#x5982;&#x679C;<span class="math inline">\(\gamma\)</span>&#x5BF9;&#x4E8E;&#x5176;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x547D;&#x9898;&#x53D8;&#x5143;&#x7684;&#x67D0;&#x4E2A;&#x6307;&#x6D3E;&#x4E3A;&#x6210;&#x771F;&#x6307;&#x6D3E;</li>
-<li>&#x4F8B;&#x5B50;&#xFF1A;3-SAT&#x95EE;&#x9898;(&#x53EF;&#x6EE1;&#x8DB3;&#x6027;&#x95EE;&#x9898;)&#xFF1A;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5408;&#x53D6;&#x5F0F;(&#x5408;&#x53D6;&#x8303;&#x5F0F;)&#x6700;&#x591A;&#x662F;3&#x4E2A;&#x56E0;&#x5B50;&#x7684;&#x6790;&#x53D6;&#x5F0F;&#xFF0C;&#x5224;&#x65AD;&#x6B64;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x5426;&#x662F;&#x53EF;&#x6EE1;&#x8DB3;&#x7684;&#xFF0C;&#x79F0;&#x4E3A;3-SAT&#x95EE;&#x9898;(&#x4E5F;&#x5C31;&#x662F;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4F7F;&#x5F97;&#x6240;&#x6709;&#x5B50;&#x53E5;&#x4E3A;&#x771F;&#x7684;&#x6307;&#x6D3E;)&#xFF0C;&#x56FE;&#x7684;&#x67D3;&#x8272;&#x95EE;&#x9898;</li>
-<li><a href="http://ccckmit.github.io/ct/htm/NP-Complete.html" target="_blank" rel="external">&#x590D;&#x6742;&#x6027;&#x95EE;&#x9898;&#x7684;&#x4E00;&#x4E2A;blog</a></li>
+<li>它是一个NP问题</li>
+<li>所有的NP问题都可以在多项式时间内归约到这个问题</li>
+<li>SAT：一个命题<span class="math inline">\(\gamma\)</span>称为可满足式，如果<span class="math inline">\(\gamma\)</span>对于其中出现的命题变元的某个指派为成真指派</li>
+<li>例子：3-SAT问题(可满足性问题)：如果一个合取式(合取范式)最多是3个因子的析取式，判断此表达式是否是可满足的，称为3-SAT问题(也就是是否存在使得所有子句为真的指派)，图的染色问题</li>
+<li><a href="http://ccckmit.github.io/ct/htm/NP-Complete.html" target="_blank" rel="external">复杂性问题的一个blog</a></li>
 </ul></li>
-<li>BQP :&#x80FD;&#x591F;&#x88AB;&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x673A;&#x5728;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x5185;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;</li>
-<li>&#x5F52;&#x7EA6;&#xFF1A;&#x5C06;&#x67D0;&#x4E2A;&#x95EE;&#x9898;&#x8F6C;&#x5316;&#x4E3A;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x8FC7;&#x7A0B;</li>
+<li>BQP :能够被量子计算机在多项式时间内解决的问题</li>
+<li>归约：将某个问题转化为另外一个问题的过程</li>
 </ul>
 
 
@@ -258,6 +280,7 @@
         </div>
     </div>
 </article>
+
 
 
     <!-- Footer -->
@@ -312,7 +335,7 @@
                         <li>
                             <a id="totop_bottom">
                                 <span class="fa-stack fa-lg">
-                                    <i class="fa fa-arrow-circle-up fa-stack-2x"></i>
+                                    <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
                                 </span>
                             </a>
                         </li>
@@ -396,15 +419,7 @@
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<div id="totop" style="position:fixed;bottom:20px;right:50px;cursor: pointer;">
-    <span class="fa-stack fa-lg">
-        <i class="fa fa-arrow-circle-up fa-stack-2x"></i>
-    </span>
-</div>
-
-
-<script src="/js/totop.js"></script>
-
+<script src="/js/sidebar.js"></script>
 
 </body>
 

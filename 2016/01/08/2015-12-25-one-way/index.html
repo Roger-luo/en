@@ -205,14 +205,38 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="one-way-mo-xing">One-way &#x6A21;&#x578B; <a href="#one-way-mo-xing" class="header-anchor">#</a></h1>
-<h2 id="tu-tai">&#x56FE;&#x6001; <a href="#tu-tai" class="header-anchor">#</a></h2>
-<p>&#x5BF9;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x56FE;&#x6709;&#x4E24;&#x79CD;&#x5B9A;&#x4E49;&#x56FE;&#x6001;&#x7684;&#x65B9;&#x5F0F;</p>
+                
+<div id="sidebar" class="side-bar">
+    <div id="side-toc" class="btn-group btn-group-lg dropup">
+        <span class="fa-stack fa-lg" data-toggle="dropdown">
+            <i class="fa fa-bars fa-stack-2x"></i>
+        </span>
+        
+        <ul class="dropdown-menu pull-right" role="menu">
+        <ul>
+        <li><a href="#one-way-模型">One-way 模型</a><ul>
+        <li><a href="#图态">图态</a></li>
+        </ul></li>
+        </ul>
+        </ul>
+    </div>
+
+
+    <div id="totop" class="side-bar-elem">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
+        </span>
+    </div>
+</div>
+
+<h1 id="one-way-模型">One-way 模型</h1>
+<h2 id="图态">图态</h2>
+<p>对于给定的图有两种定义图态的方式</p>
 <ul>
-<li>&#x7528;&#x64CD;&#x4F5C;&#x5B9A;&#x4E49;(&#x9002;&#x7528;&#x4E8E;&#x5236;&#x5907;&#x56FE;&#x6001;)
+<li>用操作定义(适用于制备图态)
 <ul>
-<li>&#x5C06;&#x6240;&#x6709;qubit&#x5236;&#x5907;&#x6210;<span class="math inline">\(\|+\rangle\)</span></li>
-<li>&#x5BF9;&#x6709;&#x8FB9;&#x7684;qubit&#x8FDB;&#x884C;CZ&#x64CD;&#x4F5C;</li>
+<li>将所有qubit制备成<span class="math inline">\(\|+\rangle\)</span></li>
+<li>对有边的qubit进行CZ操作</li>
 </ul></li>
 </ul>
 <p><span class="math display">\[
@@ -224,20 +248,20 @@ CZ =
    &amp;    &amp;   &amp; -1\\\
 \end{pmatrix}
 \]</span></p>
-<p>&#x56E0;&#x4E3A;CZ&#x95E8;&#x5BF9;&#x79F0;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x6709;&#x5411;&#x56FE;&#x7684;&#x8FB9;</p>
-<p>&#x4E5F;&#x5C31;&#x662F; <span class="math display">\[
+<p>因为CZ门对称所以可以看作是有向图的边</p>
+<p>也就是 <span class="math display">\[
 \|G\rangle = \prod\_{(a,b)\in E} U^{(a,b)}\|+\rangle^{\otimes V}
 \]</span></p>
-<p>&#x5176;&#x4E2D;<span class="math inline">\(U^{(a,b)}\)</span>&#x662F;a,b&#x4E4B;&#x95F4;&#x7684;CZ&#x95E8;</p>
+<p>其中<span class="math inline">\(U^{(a,b)}\)</span>是a,b之间的CZ门</p>
 <ul>
-<li>&#x7528;stabilizer&#x5B9A;&#x4E49;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x9876;&#x70B9;a&#xFF0C;&#x5B9A;&#x4E49;stabilizer&#x4E3A; <span class="math display">\[
+<li>用stabilizer定义，对于一个顶点a，定义stabilizer为 <span class="math display">\[
 K\_a = \sigma\_a^x \prod\_{b\in N\_a} \sigma\_b^z
 \]</span></li>
 </ul>
-<p><span class="math inline">\(N\_a\)</span>&#x662F;a&#x7684;&#x4E34;&#x63A5;&#x70B9;&#x96C6;&#x5408;&#xFF0C;&#x6240;&#x6709;&#x7684;stabilizer&#x90FD;&#x662F;&#x5BF9;&#x6613;&#x7684;(&#x8FD9;&#x662F;&#x6307;&#x4EC0;&#x4E48;&#xFF1F;)&#xFF0C;&#x6240;&#x6709;&#x7684;stabilizer&#x5728;&#x56FE;&#x6001;&#x4E2D;&#x7B49;&#x4E8E;1&#xFF1F;</p>
-<p>&#x5B9A;&#x4E49;Hamiltonian <span class="math display">\[
+<p><span class="math inline">\(N\_a\)</span>是a的临接点集合，所有的stabilizer都是对易的(这是指什么？)，所有的stabilizer在图态中等于1？</p>
+<p>定义Hamiltonian <span class="math display">\[
 H = -\sum\_a K\_a
-\]</span> &#x90A3;&#x4E48;<span class="math inline">\(H\)</span>&#x7684;&#x57FA;&#x6001;&#x5C31;&#x662F;&#x56FE;&#x6001;<span class="math inline">\(\|G\rangle\)</span></p>
+\]</span> 那么<span class="math inline">\(H\)</span>的基态就是图态<span class="math inline">\(\|G\rangle\)</span></p>
 
 
                 
@@ -273,6 +297,7 @@ H = -\sum\_a K\_a
         </div>
     </div>
 </article>
+
 
 
     <!-- Footer -->
@@ -327,7 +352,7 @@ H = -\sum\_a K\_a
                         <li>
                             <a id="totop_bottom">
                                 <span class="fa-stack fa-lg">
-                                    <i class="fa fa-arrow-circle-up fa-stack-2x"></i>
+                                    <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
                                 </span>
                             </a>
                         </li>
@@ -411,15 +436,7 @@ H = -\sum\_a K\_a
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<div id="totop" style="position:fixed;bottom:20px;right:50px;cursor: pointer;">
-    <span class="fa-stack fa-lg">
-        <i class="fa fa-arrow-circle-up fa-stack-2x"></i>
-    </span>
-</div>
-
-
-<script src="/js/totop.js"></script>
-
+<script src="/js/sidebar.js"></script>
 
 </body>
 
