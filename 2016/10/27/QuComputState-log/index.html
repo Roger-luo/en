@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Not every post is provided with an English version (eg. novels)">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Roger Luo">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Add Graph States to QuComputState"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Not every post is provided with an English version (eg. novels)" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Half Integer"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Add Graph States to QuComputState - Half Integer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/en/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/en/">Half Integer</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="https://Roger-luo.github.io/">
+                            
+                                中文
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/en/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/cv/">
+                            
+                                CV
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/codes/">
+                            
+                                codes
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://Roger-luo.github.io/slides/">
+                            
+                                slides
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/archives">
+                            
+                                archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/Roger-luo">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="post-header" style="background-image: url('/img/home-bg-2.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Add Graph States to QuComputState</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-10-27
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/en/tags/Logs/">#Logs</a> <a href="/en/tags/QuComputState/">#QuComputState</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+<div id="sidebar" class="side-bar">
+    <div id="side-toc" class="btn-group btn-group-lg dropup">
+        <span class="fa-stack fa-lg" data-toggle="dropdown">
+            <i class="fa fa-bars fa-stack-2x"></i>
+        </span>
+        
+        <ul class="dropdown-menu pull-right" role="menu">
+        <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#new-dependencies">New Dependencies</a></li>
+        <li><a href="#implementation">Implementation</a><ul>
+        <li><a href="#type-structure">Type structure</a></li>
+        <li><a href="#methods">methods</a><ul>
+        <li><a href="#convert">Convert</a></li>
+        <li><a href="#stabilizers">Stabilizers</a></li>
+        <li><a href="#lc-equivalence">LC equivalence</a></li>
+        </ul></li>
+        </ul></li>
+        <li><a href="#to-do-and-to-be-decided">To-Do and To be decided</a></li>
+        </ul>
+        </ul>
+    </div>
+
+
+    <div id="totop" class="side-bar-elem">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
+        </span>
+    </div>
+</div>
+
+<h1 id="introduction">Introduction</h1>
+<p>Graph state is a kind of notation of graphs in a quantum state version. It is widely used in surface coding, one-way quantum computing (also known as measurement-based computing), and probably some other amazing places. I add this type in order to implement the simulation about one-way quantum computing in QuCmp.jl.</p>
+<h1 id="new-dependencies">New Dependencies</h1>
+<p><a href="https://github.com/JuliaGraphs/LightGraphs.jl" target="_blank" rel="external"><strong>LightGraphs.jl</strong></a> An optimized graphs package for Julia</p>
+<h1 id="implementation">Implementation</h1>
+<h2 id="type-structure">Type structure</h2>
+<p>The graph state’s data is stored in a LightGraphs.jl <code>Graph</code> type.</p>
+<figure class="highlight julia"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> GraphState</div><div class="line">    graph<span class="type">::</span>Graph</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h2 id="methods">methods</h2>
+<h3 id="convert">Convert</h3>
+<p>Graph state can be converted to a normal state vector. Suppose <span class="math inline">\(S_1,S_2,S_m\)</span> are the stabilizers of graph state <span class="math inline">\(|G\rangle\)</span>. Define Hamiltonian <span class="math inline">\(H\)</span></p>
+<p><span class="math display">\[
+H = \sum_i S_i
+\]</span></p>
+<p>The state vector of <span class="math inline">\(|G\rangle\)</span> can be proved to be the ground state of <span class="math inline">\(H\)</span>. Therefore, the <code>convert</code> function is defined to use Julia’s function <code>eigs</code> to calculate the eigen vector of sparse matrix <code>H</code>, and is normalized by <code>normalize</code></p>
+<h3 id="stabilizers">Stabilizers</h3>
+<p>Stabilizer group is calculated in this method : <code>stabilizers</code>, with a return collection of all stabilizers defined by a certain graph structure</p>
+<h3 id="lc-equivalence">LC equivalence</h3>
+<p>LC equivalence is evaluated by <code>isLCeq</code></p>
+<p><span class="math display">\[
+\mathbf{flag} = (\mathbf{1}|\mathbf{\Gamma}\^{A}) \mathbf{P} (\mathbf{1}|\mathbf{\Gamma}\^{B})^T
+\]</span></p>
+<p>where <span class="math inline">\(\mathbf{\Gamma}\)</span> is the adjacency matrix of graph A, while <span class="math inline">\(\mathbf{\Gamma&#39;}\)</span> is the adjacency matrix of graph B, and <span class="math inline">\(\mathbf{P}\)</span> is defined below</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+\mathbf{0} &amp; \mathbf{1} \\\\
+\mathbf{1} &amp; \mathbf{0}
+\end{pmatrix}
+\]</span></p>
+<p>A is LC-equivalent to B, only when <span class="math inline">\(\mathbf{flag}\)</span> is a zero matrix.</p>
+<h1 id="to-do-and-to-be-decided">To-Do and To be decided</h1>
+<p>I’m note sure whether it is better to include <code>GraphState</code> in <code>AbstractQuState</code> or a subtype of <code>AbstractQuVector</code> in QuBase or just let it be a single type. The problem is I can not convert a given state vector to a <code>GraphState</code> or <code>stlzState</code> due to their space are not actually equal.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-QuComputState-log" data-title="Add Graph States to QuComputState" data-url="http://Roger-luo.github.com/en/en/2016/10/27/QuComputState-log/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'rogerluo'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+            </script>
+        <!-- 多说公共JS代码 end -->
+    </section>
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Roger-luo" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a onclick="alert('Email me to get my wechat XD ')" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:hiroger@qq.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a id="totop_bottom">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+                
+                <div class="copyright text-muted">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                Click to see Roger Luo's friends :-)
+                            </a>
+                        </h4>
+                    </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                
+                <p class="copyright text-muted" style="margin-top: 7px">
+                <a target="_blank" href="http://crduan.cc">Chenru Duan</a>
+                </p>
+                
+                <p class="copyright text-muted" style="margin-top: 7px">
+                <a target="_blank" href="http://chenjunwang.com">Chenjun Wang</a>
+                </p>
+                
+                </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Waypoint -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+<!-- 
+<script type="text/javascript">
+    var disqus_shortname = 'rogerluo';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+ -->
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+          processEscapes: true
+        },
+        TeX: {
+          equationNumbers: {
+            autoNumber: 'AMS'
+          }
+        },
+        "HTML-CSS": {
+          imageFont: null
+        }
+      });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script src="/en/js/sidebar.js"></script>
+
+</body>
+
+</html>

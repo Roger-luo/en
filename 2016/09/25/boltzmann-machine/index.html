@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Not every post is provided with an English version (eg. novels)">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Roger Luo">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Boltzmann Machine"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Not every post is provided with an English version (eg. novels)" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Half Integer"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Boltzmann Machine - Half Integer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/en/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/en/">Half Integer</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="https://Roger-luo.github.io/">
+                            
+                                中文
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/en/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/cv/">
+                            
+                                CV
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/codes/">
+                            
+                                codes
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://Roger-luo.github.io/slides/">
+                            
+                                slides
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/archives">
+                            
+                                archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/Roger-luo">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="post-header" style="background-image: url('/img/home-bg-2.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Boltzmann Machine</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-09-25
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/en/tags/Machine-Learning/">#Machine Learning</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+<div id="sidebar" class="side-bar">
+    <div id="side-toc" class="btn-group btn-group-lg dropup">
+        <span class="fa-stack fa-lg" data-toggle="dropdown">
+            <i class="fa fa-bars fa-stack-2x"></i>
+        </span>
+        
+        <ul class="dropdown-menu pull-right" role="menu">
+        <ul>
+        <li><a href="#boltzmann-machine">Boltzmann Machine</a></li>
+        <li><a href="#some-boltzmann-posts-and-materials">Some Boltzmann posts and materials</a></li>
+        <li><a href="#a-brief-introduction-to-restricted-and-fully-connected-boltzmann-machine">A Brief Introduction to Restricted and fully connected Boltzmann Machine</a><ul>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#probability-of-a-units-state">Probability of a unit’s state</a></li>
+        <li><a href="#equilibrium-state">Equilibrium state</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#learning-goal-maximizing-likelihood">Learning Goal (Maximizing likelihood)</a></li>
+        </ul></li>
+        </ul>
+        </ul>
+    </div>
+
+
+    <div id="totop" class="side-bar-elem">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
+        </span>
+    </div>
+</div>
+
+<h1 id="boltzmann-machine">Boltzmann Machine</h1>
+<p>The Boltzmann Machine (BM) is known as a type of generative stochastic neural network and Markov Random Field invented by Geoffrey Hinton and Terry Sejnowski in 1985 <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Boltzmann machines can be seen as the stochastic generative counterpart of Hopefield nets<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. They were one of the first examples of a neural network capable of learning internal representations, and are able to represent and solve difficult combinatoric problems. They are theoretically intriguing because of the locality and Hebbian nature of their training algorithm, and because of their parallelism and the resemblance of their dynamics to simple physical processes. Due to a number of issues discussed below, Boltzmann machines with unconstrained connectivity have not proven useful for practical problems in machine learning or inference, but if the connectivity is properly constrained, the learning can be made efficient enough to be useful for practical problems. Usually, Restricted Bolzmann Machine (RBM) will be applied to practical use. <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
+<h1 id="some-boltzmann-posts-and-materials">Some Boltzmann posts and materials</h1>
+<ul>
+<li><a href="http://deeplearning.net/tutorial/rbm.html" target="_blank" rel="external">Deep Learning Net: Restrict Boltzmann Machines (RBM)</a></li>
+<li><a href="https://deeplearning4j.org/restrictedboltzmannmachine" target="_blank" rel="external">A Beginner’s Tutorial for Restricted Boltzmann Machine (RBM)</a></li>
+<li><a href="https://www.cs.toronto.edu/~hinton/absps/guideTR.pdf" target="_blank" rel="external">Hinton’s Lecture Guide</a></li>
+<li><a href="http://www.cs.utoronto.ca/~yueli/CSC321_UTM_2014_files/tut9.pdf" target="_blank" rel="external">CSC321 in UToronto (Slides)</a></li>
+</ul>
+<h1 id="a-brief-introduction-to-restricted-and-fully-connected-boltzmann-machine">A Brief Introduction to Restricted and fully connected Boltzmann Machine</h1>
+<h2 id="structure">Structure</h2>
+<p>A Boltzmann machine, like a Hopefield network, is a network of units with an “energy” defined for the network. It also has binary units, but unlike Hopefield nets, Boltzmann machine units are stochastic. The global energy <span class="math inline">\(E\)</span>, in a Boltzmann machine is identical in form to that of a Hopfield network</p>
+<p><span class="math display">\[
+E = -(\sum_{i,j}\omega_{ij} s_i s_j +\sum_i\theta_i s_i)
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\omega_{ij}\)</span> is the connection strength between unit <span class="math inline">\(j\)</span> and unit <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(s_i\)</span> is the state, <span class="math inline">\(s_i\in {0,1}\)</span>, of unit <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(\theta_i\)</span> is the bias of unit <span class="math inline">\(i\)</span> in the global energy function. (<span class="math inline">\(-\theta_i\)</span> is the activation threshold for the unit)</li>
+</ul>
+<p>Often the weights are represented in matrix form with a symmetric matrix <span class="math inline">\(W\)</span>, with zeros along the diagonal.</p>
+<h2 id="probability-of-a-units-state">Probability of a unit’s state</h2>
+<p>The difference in the global energy that results from a single unit <span class="math inline">\(i\)</span> being 0 (off) versus 1 (on), written <span class="math inline">\(\Delta E_i\)</span>, assuming a symmetric matrix of weights, is given by:</p>
+<p><span class="math display">\[
+\Delta E_i = \sum_{j} \omega_{ij}s_j + \theta_i
+\]</span></p>
+<p>This can be expressed as the difference of energies of two states:</p>
+<p><span class="math display">\[
+\Delta E_i = E_{i=off} - E_{i=on}
+\]</span></p>
+<p>We then substitute the energy of each state with its relative probability</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Delta E_i &amp;= -T\ln(p_{i=off})+T\ln(p_{i=on})\\\\
+\frac{\Delta E_i}{T} &amp;= \ln(p_{i=on}) - \ln(1-p_{i=on})\\\\
+p_{i=on} &amp;= \frac{1}{1+\exp(-\frac{\Delta E_i}{T})}
+\end{aligned}
+\]</span></p>
+<p>Where <span class="math inline">\(T\)</span> is the temperature of the system.</p>
+<h2 id="equilibrium-state">Equilibrium state</h2>
+<p>The network is run by repeatedly choosing a unit and setting its state according to the above formula. After running for long enough at a certain temperature, the probability of a global state of the network will depend only upon that global state’s energy, according to a Boltzmann distribution, and not on the initial state from which the process was started. This means that log-probabilities of global states become linear in their energies. This relationship is true when the machine is “at thermal equilibrium”, meaning that the probability distribution of global states has converged. If we start running the network from a high temperature, and gradually decrease it until we reach a thermal equilibrium at a low temperature, we may converge to a distribution where the energy level fluctuates around the global minimum. This process is called simulated annealing.</p>
+<h2 id="training">Training</h2>
+<p>The units in the Boltzmann Machine are divided into ‘visible’ units, V, and ‘hidden’ units, H. The visible units are those which receive information from the ‘environment’, i.e. our training set is a set of binary vectors over the set V. The distribution over the training set is denoted <span class="math inline">\(P^{+}(V)\)</span>.</p>
+<p>As is discussed above, the distribution over global states converges as the Boltzmann machine reached thermal equilibrium. We denote this distribution, after we marginalize it over the hidden units, as <span class="math inline">\(P^{-}(V)\)</span>.</p>
+<p>Our goal is to approximate the ‘real’ distribution <span class="math inline">\(P^{+}(V)\)</span> using the <span class="math inline">\(P^{-}(V)\)</span> which will be produced (eventually) by the machine. To measure how similar the two distributions are, we use the Kullback-Leibler divergence (ususlly noted as KL-divergence) <span class="math inline">\(KL(+|-)\)</span>:</p>
+<p><span class="math display">\[
+KL(+|-) = \sum_{v} P\^+ (v) \ln(\frac{P\^{+}(v)}{P\^{-}(v)})
+\]</span></p>
+<p>where the sum is over all the possible states of <span class="math inline">\(V\)</span>. <span class="math inline">\(KL(+|-)\)</span> is a function of the weights, since they determine the energy of a state, and the energy determines <span class="math inline">\(P\^{-}(v)\)</span>. Therefore, a gradient decent can be simply applied over <span class="math inline">\(KL\)</span></p>
+<h2 id="learning-goal-maximizing-likelihood">Learning Goal (Maximizing likelihood)</h2>
+<p>Consider a training set of binary vectors which we will assume are binary images for the purpose of explanation. The training set can be modeled using a two-layer network called a “Restricted Boltzmann Machine” Define RBM’s Hamiltonian (Hopefield, 1982):</p>
+<p><span class="math display">\[
+E(\mathbf{v},\mathbf{h};\theta) = -\sum_{ij} \omega_{ij}v_i h_j - \sum_{i}b_i v_i - \sum_{j} a_j h_j
+\]</span></p>
+<p>where <span class="math inline">\(v_i,h_j\)</span> are the binary states of visible unit <span class="math inline">\(i\)</span> and hidden unit <span class="math inline">\(j\)</span>, <span class="math inline">\(a_i,b_j\)</span> are their biases and <span class="math inline">\(\omega_{ij}\)</span> is the weight between them.</p>
+
+
+<button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
+    Cut to clipboard
+</button>
+
+<textarea id="bar">Mussum ipsum cacilds...</textarea>
+
+
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn1"><p><a href="https://www.researchgate.net/profile/Terrence_Sejnowski/publication/242509302_Learning_and_relearning_in_Boltzmann_machines/links/54a4b00f0cf256bf8bb327cc.pdf" target="_blank" rel="external">Learning and releaming in Boltzmann machines</a><a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p><a href="https://bi.snu.ac.kr/Courses/g-ai09-2/hopfield82.pdf" target="_blank" rel="external">Neural networks and physical systems with emergent collective computational abilities</a><a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p><a href="http://link.springer.com/chapter/10.1007/978-94-009-0643-3_76" target="_blank" rel="external">Fast Teaching of Boltzmann Machines with Local Inhibition</a><a href="#fnref3">↩</a></p></li>
+</ol>
+</div>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-boltzmann-machine" data-title="Boltzmann Machine" data-url="http://Roger-luo.github.com/en/en/2016/09/25/boltzmann-machine/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'rogerluo'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+            </script>
+        <!-- 多说公共JS代码 end -->
+    </section>
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Roger-luo" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a onclick="alert('Email me to get my wechat XD ')" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:hiroger@qq.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a id="totop_bottom">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+                
+                <div class="copyright text-muted">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                Click to see Roger Luo's friends :-)
+                            </a>
+                        </h4>
+                    </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                
+                <p class="copyright text-muted" style="margin-top: 7px">
+                <a target="_blank" href="http://crduan.cc">Chenru Duan</a>
+                </p>
+                
+                <p class="copyright text-muted" style="margin-top: 7px">
+                <a target="_blank" href="http://chenjunwang.com">Chenjun Wang</a>
+                </p>
+                
+                </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Waypoint -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+<!-- 
+<script type="text/javascript">
+    var disqus_shortname = 'rogerluo';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+ -->
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+          processEscapes: true
+        },
+        TeX: {
+          equationNumbers: {
+            autoNumber: 'AMS'
+          }
+        },
+        "HTML-CSS": {
+          imageFont: null
+        }
+      });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script src="/en/js/sidebar.js"></script>
+
+</body>
+
+</html>
